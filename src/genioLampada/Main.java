@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 
 public class Main {
-	static Scanner sc = new Scanner(System.in);
+	 static Scanner sc = new Scanner(System.in);
+	 static Scanner sd = new Scanner(System.in);
 
 	
 	public static void menu() {
@@ -26,17 +27,22 @@ public class Main {
 			
 			System.out.println("Quantos desejos pretende pedir?");
 			int desejos = sc.nextInt();
-
+			String desejoIndicado = "";
+			
 			if (esfregadelas % 2 == 0)
 			{
 				System.out.println("sai o genio bom, desejos disponiveis: " + desejos );
-				int i = 0;
+				int i = 1;
 				
 				
-				while(i < desejos) {
-					String desejoIndicado = sc.nextLine();
-					System.out.println(desejoIndicado);
+				while(i <= desejos) {
+					sc.skip("\\R?");
+					
 					System.out.println("Indique o desejo");
+					desejoIndicado = sc.next();
+				
+					System.out.print(desejoIndicado);
+					
 					i++;
 					
 				}
@@ -57,7 +63,7 @@ public class Main {
 		
 	}
 	public static void main(String[] args) {
-		Lampada lampada1  = new Lampada(5);
+		//Lampada lampada1  = new Lampada(5);
 
 		while(true) {
 			menu();
