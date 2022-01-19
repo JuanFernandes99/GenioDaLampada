@@ -2,70 +2,67 @@ package genioLampada;
 
 import java.util.Scanner;
 
-
-
 public class Main {
-	 static Scanner sc = new Scanner(System.in);
-	 static Scanner sd = new Scanner(System.in);
+	static Scanner sc = new Scanner(System.in);
 
-	
 	public static void menu() {
-		System.out.println("\nBem-vindo a Lampada Mágica!");
-		System.out.println("Escolha a opçao que prentende:");
-		System.out.println("1 - Esfregar");
-		System.out.println("2 -Sair");
+		System.out.println("\nBem-vindo ao jogo da Lampada Mágica!");
+		System.out.println("Escolha uma das opções disponíveis:");
+		System.out.println("1 - Esfregar a lâmpada");
+		System.out.println("2 - Sair do Jogo");
 
-	    int opcao = sc.nextInt();
-	    switch (opcao) {
-	      case 1:
+		int opcao = sc.nextInt();
+		switch (opcao) {
+		case 1:
+//Criar uma função para colocar tudo
 
-	    	System.out.println("Quantas vezes quer esfregar a lampada?");
-	    	int esfregadelas = sc.nextInt();
-	        Lampada.esfregar(esfregadelas);
-	        int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
-			System.out.println("Lampada esfregada: " + esfregadelasAcumuladas + " vezes");
-			
-			System.out.println("Quantos desejos pretende pedir?");
+			System.out.println("Quantas vezes quer esfregar a lampada?");
+			int esfregadelas = sc.nextInt();
+			Lampada.esfregar(esfregadelas);
+			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
+			System.out.println("A lâmpada já foi esfregada: " + esfregadelasAcumuladas + " vezes");
+
+			System.out.println("\nQuantos desejos pretende pedir?");
 			int desejos = sc.nextInt();
+			int desejosDisponiveis = desejos;
 			String desejoIndicado = "";
-			
-			if (esfregadelas % 2 == 0)
-			{
-				System.out.println("sai o genio bom, desejos disponiveis: " + desejos );
-				int i = 1;
+
+			if (esfregadelas % 2 == 0) {
+				System.out.println("Olá, eu sou o gênio bem-humorado e lhe concederei todos os desejos que você me pedir");
 				
 				
-				while(i <= desejos) {
-					sc.skip("\\R?");
-					
-					System.out.println("Indique o desejo");
+				int aux = 0;
+				while (aux < desejos) {
+		
+					System.out.println("\nDesejos disponíveis: " + desejosDisponiveis);
+					System.out.println("\nIndique o seu desejo");
 					desejoIndicado = sc.next();
-				
-					System.out.print(desejoIndicado);
-					
-					i++;
-					
+
+					System.out.println("Desejo: " + desejoIndicado);
+					System.out.println("\nDesejo Cumprido! :)");
+
+					aux++;
+					desejosDisponiveis--;
+
 				}
-				
-				
-			} else
-			{
+				System.out.println("Acabaram os desejos :(");
+			} else {
 				System.out.println("Chama genio mau");
 			}
-		
-	       
-	    	  break;
-	      case 2:
-	        System.out.println("2 - Sair");
-	        System.exit(0);
-	        break;
-	    }
-		
-	}
-	public static void main(String[] args) {
-		//Lampada lampada1  = new Lampada(5);
 
-		while(true) {
+			break;
+		case 2:
+			System.out.println("2 - Sair");
+			System.exit(0);
+			break;
+		}
+
+	}
+
+	public static void main(String[] args) {
+		// Lampada lampada1 = new Lampada(5);
+
+		while (true) {
 			menu();
 		}
 	}
