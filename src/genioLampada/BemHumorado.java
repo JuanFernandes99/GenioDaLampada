@@ -19,7 +19,7 @@ public class BemHumorado extends Genio {
 
 	@Override
 	public void concedeDesejo() {
-		// TODO Auto-generated method stub
+
 		
 	}
 

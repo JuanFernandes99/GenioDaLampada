@@ -9,7 +9,7 @@ public class MalHumorado extends Genio {
 
 	@Override
 	public void concedeDesejo() {
-		// TODO Auto-generated method stub
+
 		
 	}
 }
