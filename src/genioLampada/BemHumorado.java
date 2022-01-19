@@ -17,4 +17,10 @@ public class BemHumorado extends Genio {
 		return getMax() - getDesejosConcedidos();
 	}
 
+	@Override
+	public void concedeDesejo() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

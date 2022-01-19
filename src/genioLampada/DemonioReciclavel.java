@@ -5,4 +5,10 @@ public class DemonioReciclavel extends Genio {
 		super(max);
 	}
 
+	@Override
+	public void concedeDesejo() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

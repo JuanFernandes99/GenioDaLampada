@@ -6,4 +6,10 @@ public class MalHumorado extends Genio {
 		super(1);
 
 	}
+
+	@Override
+	public void concedeDesejo() {
+		// TODO Auto-generated method stub
+		
+	}
 }
