@@ -6,7 +6,7 @@ public class Main {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void menu() {
-		System.out.println("\nBem-vindo ao jogo da Lampada Mágica!");
+		System.out.println("\nBem-vindo ao jogo da Lâmpada Mágica!");
 		System.out.println("Escolha uma das opções disponíveis:");
 		System.out.println("1 - Esfregar a lâmpada");
 		System.out.println("2 - Sair do Jogo");
@@ -16,7 +16,7 @@ public class Main {
 		case 1:
 //Criar uma função para colocar tudo
 
-			System.out.println("Quantas vezes quer esfregar a lampada?");
+			System.out.println("Quantas vezes deseja esfregar a lâmpada?");
 			int esfregadelas = sc.nextInt();
 			Lampada.esfregar(esfregadelas);
 			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
@@ -45,7 +45,7 @@ public class Main {
 					desejosDisponiveis--;
 
 				}
-				System.out.println("Acabaram os desejos :(");
+				System.out.println("Esgotou os seus desejos :(");
 			} else {
 				System.out.println("Chama genio mau");
 			}
