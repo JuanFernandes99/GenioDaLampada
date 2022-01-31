@@ -2,8 +2,12 @@ package genioLampada;
 
 public class MalHumorado extends Genio {
 
-	public MalHumorado(int max) {
-		super(1);
+	public MalHumorado() {
+
+	}
+
+	public void concedeDesejo(int max) {
+		// TODO Auto-generated method stub
 
 	}
 

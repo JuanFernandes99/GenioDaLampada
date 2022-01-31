@@ -6,11 +6,11 @@ public abstract class Genio {
 	private int max;
 
 	// CONSTRUTOR
-	protected Genio(int aMax) {
-		max = aMax;
+	protected Genio() {
+
 	}
 
-	public abstract void concedeDesejo();
+	public abstract void concedeDesejo(int max);
 
 	public void AcresDesejos() { // Acrescimos dos desejos.
 		desejosConcedidos++;
