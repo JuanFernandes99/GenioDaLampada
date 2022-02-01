@@ -20,19 +20,19 @@ public class Main {
 		int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
 		System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
 
-		int aux2 = pedirDesejos();
+		int aux = pedirDesejos();
 
 		if (esfregadelas % 2 == 0) {
 
 			System.out.println("Ol�, eu sou o g�nio bem-humorado e lhe concederei todos os desejos que voc� me pedir");
 
 			BemHumorado gbomBemHumorado = new BemHumorado();
-			gbomBemHumorado.concedeDesejo(aux2);
+			gbomBemHumorado.concedeDesejo(aux);
 
 		} else {
 			System.out.println("Chama genio mau");
 			MalHumorado gmauHumorado = new MalHumorado();
-			gmauHumorado.concedeDesejo(aux2);
+			gmauHumorado.concedeDesejo(aux);
 		}
 
 	}
