@@ -32,12 +32,6 @@ public class Main {
 
 	}
 
-	public static int pedirDesejos() {
-		System.out.println("\nQuantos desejos pretende pedir?");
-		int desejos = sc.nextInt();
-		return desejos;
-	}
-
 	public static void esfregarLampada() {
 
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
@@ -61,6 +55,12 @@ public class Main {
 			gmauHumorado.concedeDesejo(aux);
 		}
 
+	}
+
+	public static int pedirDesejos() {
+		System.out.println("\nQuantos desejos pretende pedir?");
+		int desejos = sc.nextInt();
+		return desejos;
 	}
 
 }
