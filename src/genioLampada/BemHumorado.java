@@ -16,15 +16,10 @@ public class BemHumorado extends Genio {
 		return getMax() - getDesejosConcedidos();
 	}
 
-<<<<<<< Updated upstream
-	@Override
-	public void concedeDesejo() {
 
-		
-=======
+
+
 	public void concedeDesejo(int max) {
-		// TODO Auto-generated method stub
-		// return
 		int aux = 0;
 		while (aux < max) {
 
@@ -39,7 +34,7 @@ public class BemHumorado extends Genio {
 		}
 		System.out.println("Esgotou os seus desejos :(");
 
->>>>>>> Stashed changes
+
 	}
 
 }
