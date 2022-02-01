@@ -3,12 +3,38 @@ package genioLampada;
 import java.util.Scanner;
 
 public class Main {
+
 	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		while (true) {
+			menu();
+		}
+	}
+
+	public static void menu() {
+		System.out.println("\nBem-vindo ao jogo da Lampada M�gica!");
+		System.out.println("Escolha uma das op��es dispon�veis:");
+		System.out.println("1 - Esfregar a l�mpada");
+		System.out.println("2 - Sair do Jogo");
+
+		int opcao = sc.nextInt();
+		switch (opcao) {
+		case 1:
+			esfregarLampada();
+			break;
+		case 2:
+			System.out.println("2 - Sair");
+			System.exit(0);
+			break;
+		}
+
+	}
 
 	public static int pedirDesejos() {
 		System.out.println("\nQuantos desejos pretende pedir?");
 		int desejos = sc.nextInt();
-		// int desejosDisponiveis = desejos;
 		return desejos;
 	}
 
@@ -35,34 +61,6 @@ public class Main {
 			gmauHumorado.concedeDesejo(aux);
 		}
 
-	}
-
-	public static void menu() {
-		System.out.println("\nBem-vindo ao jogo da Lampada M�gica!");
-		System.out.println("Escolha uma das op��es dispon�veis:");
-		System.out.println("1 - Esfregar a l�mpada");
-		System.out.println("2 - Sair do Jogo");
-
-		int opcao = sc.nextInt();
-		switch (opcao) {
-		case 1:
-//Criar uma fun��o para colocar tudo
-			esfregarLampada();
-			break;
-		case 2:
-			System.out.println("2 - Sair");
-			System.exit(0);
-			break;
-		}
-
-	}
-
-	public static void main(String[] args) {
-		// Lampada lampada1 = new Lampada(5);
-
-		while (true) {
-			menu();
-		}
 	}
 
 }
