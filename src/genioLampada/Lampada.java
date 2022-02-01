@@ -2,7 +2,7 @@ package genioLampada;
 
 public class Lampada {
 
-	private int maxGenios; // Devemos declarar um maximo de gÃ©nios nesta lampada?!
+	private int maxGenios; // Devemos declarar um maximo de génios nesta lampada?!
 	private int auxiliarGenios; // ?
 	private static int esfregadelas;
 	private int demonios;
@@ -90,3 +90,4 @@ public class Lampada {
 	}
 
 }
+

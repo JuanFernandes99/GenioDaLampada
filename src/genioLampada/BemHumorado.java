@@ -16,10 +16,8 @@ public class BemHumorado extends Genio {
 		return getMax() - getDesejosConcedidos();
 	}
 
-
-
-
 	public void concedeDesejo(int max) {
+
 		int aux = 0;
 		while (aux < max) {
 
@@ -33,7 +31,6 @@ public class BemHumorado extends Genio {
 
 		}
 		System.out.println("Esgotou os seus desejos :(");
-
 
 	}
 
