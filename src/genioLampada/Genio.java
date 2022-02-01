@@ -3,10 +3,10 @@ package genioLampada;
 public abstract class Genio {
 	protected int desejosConcedidos;
 
-	private int max;
+	protected int max;
 
 	// CONSTRUTOR
-	protected Genio() {
+	public Genio() {
 
 	}
 
