@@ -39,7 +39,7 @@ public class Main {
 		Lampada.esfregar(esfregadelas);
 		int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
 		System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
-//a
+
 		int aux = pedirDesejos();
 
 		if (esfregadelas % 2 == 0) {
