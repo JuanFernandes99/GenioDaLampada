@@ -22,22 +22,18 @@ public class Main {
 
 		int aux2 = pedirDesejos();
 
-			if (esfregadelas % 2 == 0) {
+		if (esfregadelas % 2 == 0) {
 
-				System.out.println(
-						"Ol�, eu sou o g�nio bem-humorado e lhe concederei todos os desejos que voc� me pedir");
+			System.out.println("Ol�, eu sou o g�nio bem-humorado e lhe concederei todos os desejos que voc� me pedir");
 
-				int aux = 0;
+			BemHumorado gbomBemHumorado = new BemHumorado();
+			gbomBemHumorado.concedeDesejo(aux2);
 
-				BemHumorado gbomBemHumorado = new BemHumorado();
-				gbomBemHumorado.concedeDesejo(aux2);
-
-			} else {
-				System.out.println("Chama genio mau");
-				MalHumorado gmauHumorado = new MalHumorado();
-				gmauHumorado.concedeDesejo(aux2);
-			}
-		
+		} else {
+			System.out.println("Chama genio mau");
+			MalHumorado gmauHumorado = new MalHumorado();
+			gmauHumorado.concedeDesejo(aux2);
+		}
 
 	}
 
