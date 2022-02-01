@@ -15,7 +15,7 @@ public class Main {
 
 	public static void menu() {
 		System.out.println("\nBem-vindo ao jogo da Lampada Mágica!");
-		System.out.println("Escolha uma das opções dispon�veis:");
+		System.out.println("Escolha uma das opções disponíveis:");
 		System.out.println("1 - Esfregar a Lâmpada");
 		System.out.println("2 - Sair do Jogo");
 
