@@ -22,9 +22,6 @@ public class Main {
 
 		int aux2 = pedirDesejos();
 
-		if (esfregadelas % 2 == 0) {
-			System.out.println("Ol�, eu sou o g�nio bem-humorado e lhe concederei todos os desejos que voc� me pedir");
-
 			if (esfregadelas % 2 == 0) {
 
 				System.out.println(
@@ -40,7 +37,7 @@ public class Main {
 				MalHumorado gmauHumorado = new MalHumorado();
 				gmauHumorado.concedeDesejo(aux2);
 			}
-		}
+		
 
 	}
 
