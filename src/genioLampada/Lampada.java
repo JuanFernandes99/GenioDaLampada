@@ -6,18 +6,24 @@ public class Lampada {
 	private int auxiliarGenios; // ?
 	private static int esfregadelas;
 	private int demonios;
-	private int vezesRecarregada;
+	private static int vezesRecarregada;
 	private int numeroDesejosEsperado;
-
+	private static boolean recarregar = false;
+	private static int numgeniosDisponiveis = 0;
+	
 	// construtor
 	public Lampada(int aMaxGenios) {
-		maxGenios = aMaxGenios;
+		this.maxGenios = aMaxGenios;
+		this.numgeniosDisponiveis = aMaxGenios;
 	}
 
 	// metodos
 
 	public static void lampadaRecarregada() {
-
+		recarregar = true;
+		esfregadelas = 0;
+		vezesRecarregada++;
+		
 	}
 
 	public static void esfregar(int novasEsfregadelas) {
@@ -35,13 +41,19 @@ public class Lampada {
 
 	}
 
-	public void geniosDisponiveis() {
-
-
-	}
+	
 
 	// getters e setters
 
+	public void setgeniosDisponiveis() {
+		this.numgeniosDisponiveis--;
+		System.out.println("numgeniosDisponiveis " + numgeniosDisponiveis);
+
+	}
+	public static int getGeniosDisponiveis() {
+		return numgeniosDisponiveis;
+
+	}
 	public int getMaxGenios() {
 		return maxGenios;
 	}
