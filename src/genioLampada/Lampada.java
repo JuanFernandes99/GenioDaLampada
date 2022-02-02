@@ -37,6 +37,7 @@ public class Lampada {
 
 	public void geniosDisponiveis() {
 
+
 	}
 
 	// getters e setters

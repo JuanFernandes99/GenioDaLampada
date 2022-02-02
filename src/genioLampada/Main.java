@@ -14,6 +14,7 @@ public class Main {
 	}
 
 	public static void menu() {
+
 		System.out.println("\nBem-vindo ao jogo da Lampada Mágica!");
 		System.out.println("Escolha uma das opções disponíveis:");
 		System.out.println("1 - Esfregar a Lâmpada");
@@ -22,8 +23,11 @@ public class Main {
 		int opcao = sc.nextInt();
 		switch (opcao) {
 		case 1:
+
 			esfregarLampada();
+
 			break;
+
 		case 2:
 			System.out.println("2 - Sair");
 			System.exit(0);
@@ -44,13 +48,11 @@ public class Main {
 
 		if (esfregadelas % 2 == 0) {
 
-			System.out.println("Olá, eu sou o gênio bem-humorado e lhe concederei todos os desejos que você me pedir");
-
-			BemHumorado gbomBemHumorado = new BemHumorado();
-			gbomBemHumorado.concedeDesejo(aux);
+			BemHumorado gBemHumorado = new BemHumorado();
+			gBemHumorado.concedeDesejo(aux);
 
 		} else {
-			System.out.println("Chama genio mau");
+
 			MalHumorado gmauHumorado = new MalHumorado();
 			gmauHumorado.concedeDesejo(aux);
 		}

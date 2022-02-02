@@ -17,8 +17,8 @@ public class BemHumorado extends Genio {
 	}
 
 	public void concedeDesejo(int max) {
-
-		int aux = 0;
+		System.out.println("Olá, eu sou o gênio bem-humorado e lhe concederei todos os desejos que você me pedir");
+		int aux = 0; // desejos con
 		while (aux < max) {
 
 			System.out.println("\nDesejos dispon�veis: " + (max - aux));
