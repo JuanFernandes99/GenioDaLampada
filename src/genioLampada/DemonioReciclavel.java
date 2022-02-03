@@ -1,32 +1,18 @@
 package genioLampada;
 
+import java.util.Scanner;
+
 public class DemonioReciclavel extends Genio {
+	static Scanner sc = new Scanner(System.in);
+	
 	public DemonioReciclavel() {
 
 	}
 
-	public void concedeDesejo() {
-
+	public void concedeDesejo(int max) {
+		System.out.println("Yes");
 	}
 
-	public void menuDemonio() {
-		System.out.println("1 - Pedir desejos?");
-		System.out.println("2 - Recarregar a lâmpada");
 
-		int opcao = sc.nextInt();
-		switch (opcao) {
-		case 1:
-			concedeDesejo();
-			
-			
-			break;
 
-		case 2:
-			System.out.println("2 - Sair");
-			System.exit(0);
-
-			break;
-		}
-
-	}
 }
