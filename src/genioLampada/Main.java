@@ -14,9 +14,15 @@ public class Main {
 	}
 
 	public static void menu() {
+<<<<<<< HEAD
 		System.out.println("\nBem-vindo ao jogo da Lampada MÃ¡gica!");
 		System.out.println("Escolha uma das opÃ§Ãµes disponÃ­veis:");
 		System.out.println("1 - Esfregar a LÃ¢mpada");
+=======
+		System.out.println("\nBem-vindo ao jogo da lâmpada mágica!");
+		System.out.println("Escolha uma das Opções disponíveis:");
+		System.out.println("1 - Esfregar a Lâmpada");
+>>>>>>> a92c79485d30d02e090e2409a293345068a07cf4
 		System.out.println("2 - Sair do Jogo");
 
 		int opcao = sc.nextInt();
@@ -32,25 +38,19 @@ public class Main {
 
 	}
 
-	public static int pedirDesejos() {
-		System.out.println("\nQuantos desejos pretende pedir?");
-		int desejos = sc.nextInt();
-		return desejos;
-	}
-
 	public static void esfregarLampada() {
 
-		System.out.println("Quantas vezes deseja esfregar a lÃ¢mpada?");
+		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
 		int esfregadelas = sc.nextInt();
 		Lampada.esfregar(esfregadelas);
 		int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
-		System.out.println("Esfregou a lÃ¢mpada: " + esfregadelasAcumuladas + " vezes");
+		System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
 
 		int aux = pedirDesejos();
 
 		if (esfregadelas % 2 == 0) {
 
-			System.out.println("OlÃ¡, eu sou o gÃªnio bem-humorado e lhe concederei todos os desejos que vocÃª me pedir");
+			System.out.println("Olá!, eu sou o génio bem-humorado e lhe concederei todos os desejos que você me pedir ");
 
 			BemHumorado gbomBemHumorado = new BemHumorado();
 			gbomBemHumorado.concedeDesejo(aux);
@@ -63,4 +63,9 @@ public class Main {
 
 	}
 
-}
+	public static int pedirDesejos() {
+		System.out.println("\nQuantos desejos pretende pedir?");
+		int desejos = sc.nextInt();
+		return desejos;
+	}
+
