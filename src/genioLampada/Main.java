@@ -35,7 +35,7 @@ public class Main {
 				esfregarLampada();
 			}
 			else {
-				System.out.println("Demonio");
+				menuDemonio();
 			}
 		
 			/*
@@ -83,5 +83,34 @@ public class Main {
 		int desejos = sc.nextInt();
 		return desejos;
 	}
+	public static void menuDemonio() {
+		System.out.println("Olá, eu sou demonio e lhe concederei todos os desejos que você me pedir");
+		DemonioReciclavel demonio = new DemonioReciclavel();
+		
+		System.out.println("1 - Pedir desejos?");
+		System.out.println("2 - Recarregar a lâmpada");
+		System.out.println("3- Sair");
 
+		int opcao = sc.nextInt();
+		switch (opcao) {
+		case 1:
+			int aux = pedirDesejos();
+			demonio.concedeDesejo(aux);
+			
+			
+			break;
+
+		case 2:
+			System.out.println("2 - Recarregar a lâmpada");
+	
+
+			break;
+		case 3:
+			System.out.println("2 - Recarregar a lâmpada");
+	
+
+			break;
+		}
+
+	}
 }

@@ -3,7 +3,7 @@ package genioLampada;
 public abstract class Genio {
 	protected int desejosConcedidos;
 
-	protected int max;
+	protected static int max;
 
 	// CONSTRUTOR
 	public Genio() {
@@ -21,8 +21,8 @@ public abstract class Genio {
 		return max;
 	}
 
-	public void setMax(int max) {
-		this.max = max;
+	public void setMax(int aMax) {
+		max = aMax;
 	}
 
 	public int getDesejosConcedidos() {
