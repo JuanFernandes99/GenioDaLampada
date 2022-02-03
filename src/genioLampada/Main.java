@@ -6,16 +6,15 @@ import java.util.Scanner;
 public class Main {
 
 	static Scanner sc = new Scanner(System.in);
-	
+
 	static Random ran = new Random();
 	static int maxGen = ran.nextInt(6) + 5;
 
-	static Lampada _lampada = new Lampada(maxGen);
-	
-	
+	static Lampada nlampada = new Lampada(maxGen);
+
 	public static void main(String[] args) {
-		System.out.print("--------" + _lampada.getGeniosDisponiveis());
-		
+		// System.out.print("Genios Disponiveis:" + _lampada.getGeniosDisponiveis());
+
 		while (true) {
 			menu();
 		}
@@ -30,23 +29,21 @@ public class Main {
 
 		int opcao = sc.nextInt();
 		switch (opcao) {
-		case 1: // max = 10, dispo = 10 -1 
+		case 1: // max = 10, dispo = 10 -1
 			// verificar que o numero de genios disponiveis é maior que 0
 			esfregarLampada();
-			/* caso nao seja, chamar o demonio, abrir menu que pergunta se é para garantir desejo ou
-			recarregar lampada. Se for p/ recarregar, chamar funcao que está na lampada
-			atualizar o numero de genios disponiveis com o número aleatorio dado na criaçao da lampada
-			*/
+			/*
+			 * caso nao seja, chamar o demonio, abrir menu que pergunta se é para garantir
+			 * desejo ou recarregar lampada. Se for p/ recarregar, chamar funcao que está na
+			 * lampada atualizar o numero de genios disponiveis com o número aleatorio dado
+			 * na criaçao da lampada
+			 */
 			break;
 
 		case 2:
 			System.out.println("2 - Sair");
 			System.exit(0);
-			
-			
-			
 
-			
 			break;
 		}
 
@@ -66,15 +63,12 @@ public class Main {
 
 			BemHumorado gBemHumorado = new BemHumorado();
 			gBemHumorado.concedeDesejo(aux);
-			
 
 		} else {
 
 			MalHumorado gmauHumorado = new MalHumorado();
 			gmauHumorado.concedeDesejo(aux);
 		}
-		
-		
 
 	}
 
