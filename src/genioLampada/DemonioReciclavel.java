@@ -1,7 +1,7 @@
 package genioLampada;
 
 public class DemonioReciclavel extends Genio {
-	public DemonioReciclavel(int max) {
+	public DemonioReciclavel() {
 
 	}
 
@@ -9,9 +9,24 @@ public class DemonioReciclavel extends Genio {
 
 	}
 
-	public void concedeDesejo(int max) {
-		// TODO Auto-generated method stub
+	public void menuDemonio() {
+		System.out.println("1 - Pedir desejos?");
+		System.out.println("2 - Recarregar a lâmpada");
+
+		int opcao = sc.nextInt();
+		switch (opcao) {
+		case 1:
+			concedeDesejo();
+			
+			
+			break;
+
+		case 2:
+			System.out.println("2 - Sair");
+			System.exit(0);
+
+			break;
+		}
 
 	}
-
 }

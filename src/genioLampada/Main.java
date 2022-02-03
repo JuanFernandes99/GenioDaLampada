@@ -8,12 +8,12 @@ public class Main {
 	static Scanner sc = new Scanner(System.in);
 
 	static Random ran = new Random();
-	static int maxGen = ran.nextInt(6) + 5;
+	static int maxGen = ran.nextInt(6) + 1;
 
-	static Lampada nlampada = new Lampada(maxGen);
+	static Lampada nlampada = new Lampada(2);
 
 	public static void main(String[] args) {
-		// System.out.print("Genios Disponiveis:" + _lampada.getGeniosDisponiveis());
+		// System.out.print("Genios Disponiveis:" + Lampada.getGeniosDisponiveis());
 
 		while (true) {
 			menu();
@@ -29,9 +29,15 @@ public class Main {
 
 		int opcao = sc.nextInt();
 		switch (opcao) {
-		case 1: // max = 10, dispo = 10 -1
+		case 1: // max = 10, dispo = 10 -1  // max = maxGen , dispo = funçao get
 			// verificar que o numero de genios disponiveis é maior que 0
-			esfregarLampada();
+			if (Lampada.getGeniosDisponiveis() > 0 ) {
+				esfregarLampada();
+			}
+			else {
+				System.out.println("Demonio");
+			}
+		
 			/*
 			 * caso nao seja, chamar o demonio, abrir menu que pergunta se é para garantir
 			 * desejo ou recarregar lampada. Se for p/ recarregar, chamar funcao que está na
@@ -69,7 +75,7 @@ public class Main {
 			MalHumorado gmauHumorado = new MalHumorado();
 			gmauHumorado.concedeDesejo(aux);
 		}
-
+		Lampada.setgeniosDisponiveis();
 	}
 
 	public static int pedirDesejos() {

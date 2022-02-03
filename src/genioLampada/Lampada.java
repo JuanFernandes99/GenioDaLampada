@@ -3,7 +3,6 @@ package genioLampada;
 public class Lampada {
 
 	private int maxGenios; 
-	private int auxiliarGenios; // ?
 	private static int esfregadelas;
 	private int demonios;
 	private static int vezesRecarregada;
@@ -13,14 +12,14 @@ public class Lampada {
 	
 	// construtor
 	public Lampada(int aMaxGenios) {
-		this.maxGenios = aMaxGenios;
-		this.numgeniosDisponiveis = aMaxGenios;
+		maxGenios = aMaxGenios;
+		numgeniosDisponiveis = aMaxGenios;
 	}
 
 	// metodos
 
 	public static void lampadaRecarregada() {
-		recarregar = true;
+		setRecarregar(true);
 		esfregadelas = 0;
 		vezesRecarregada++;
 		
@@ -45,9 +44,9 @@ public class Lampada {
 
 	// getters e setters
 
-	public void setgeniosDisponiveis() {
-		this.numgeniosDisponiveis--;
-		System.out.println("numgeniosDisponiveis " + numgeniosDisponiveis);
+	public static void setgeniosDisponiveis() {
+		Lampada.numgeniosDisponiveis--;
+		System.out.println("numgeniosDisponiveis: " + numgeniosDisponiveis);
 
 	}
 	public static int getGeniosDisponiveis() {
@@ -58,9 +57,6 @@ public class Lampada {
 		return maxGenios;
 	}
 
-	public int getAuxiliarGenios() {
-		return auxiliarGenios;
-	}
 
 	public static int getEsfregadelas() {
 		return esfregadelas;
@@ -82,9 +78,7 @@ public class Lampada {
 		this.maxGenios = aMaxGenios;
 	}
 
-	public void setAuxiliarGenios(int aAuxiliarGenios) {
-		this.auxiliarGenios = aAuxiliarGenios;
-	}
+
 
 	public static void setEsfregadelas(int aEsfregadelas) {
 		Lampada.esfregadelas = aEsfregadelas;
@@ -95,11 +89,19 @@ public class Lampada {
 	}
 
 	public void setVezesRecarregada(int aVezesRecarregada) {
-		this.vezesRecarregada = aVezesRecarregada;
+		Lampada.vezesRecarregada = aVezesRecarregada;
 	}
 
 	public void setNumeroDesejosEsperado(int aNumeroDesejosEsperado) {
 		this.numeroDesejosEsperado = aNumeroDesejosEsperado;
+	}
+
+	public static boolean isRecarregar() {
+		return recarregar;
+	}
+
+	public static void setRecarregar(boolean recarregar) {
+		Lampada.recarregar = recarregar;
 	}
 
 }
