@@ -13,6 +13,7 @@ public class Main {
 	static Lampada nlampada = new Lampada(2);
 
 	public static void main(String[] args) {
+		System.out.println("Bem-vindo ao jogo da Lampada Mágica!");
 		while (true) {
 			menu();
 		}
@@ -20,8 +21,8 @@ public class Main {
 
 	public static void menu() {
 
-		System.out.println("\nBem-vindo ao jogo da Lampada Mágica!");
-		System.out.println("Escolha uma das opções disponíveis:");
+		
+		System.out.println("\nEscolha uma das opções disponíveis:");
 		System.out.println("1 - Esfregar a Lâmpada");
 		System.out.println("2 - Sair do Jogo");
 

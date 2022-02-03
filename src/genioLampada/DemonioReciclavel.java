@@ -25,8 +25,6 @@ public class DemonioReciclavel extends Genio {
 		case 1:
 			int aux = Main.pedirDesejos(); // ver
 			demonio.concedeDesejo(aux);
-			
-			
 			break;
 
 		case 2:
