@@ -13,8 +13,6 @@ public class Main {
 	static Lampada nlampada = new Lampada(2);
 
 	public static void main(String[] args) {
-		// System.out.print("Genios Disponiveis:" + Lampada.getGeniosDisponiveis());
-
 		while (true) {
 			menu();
 		}
@@ -29,13 +27,12 @@ public class Main {
 
 		int opcao = sc.nextInt();
 		switch (opcao) {
-		case 1: // max = 10, dispo = 10 -1  // max = maxGen , dispo = funçao get
-			// verificar que o numero de genios disponiveis é maior que 0
+		case 1:
 			if (Lampada.getGeniosDisponiveis() > 0 ) {
 				esfregarLampada();
 			}
 			else {
-				menuDemonio();
+				DemonioReciclavel.menuDemonio(); // ver
 			}
 		
 			/*
@@ -83,34 +80,5 @@ public class Main {
 		int desejos = sc.nextInt();
 		return desejos;
 	}
-	public static void menuDemonio() {
-		System.out.println("Olá, eu sou demonio e lhe concederei todos os desejos que você me pedir");
-		DemonioReciclavel demonio = new DemonioReciclavel();
-		
-		System.out.println("1 - Pedir desejos?");
-		System.out.println("2 - Recarregar a lâmpada");
-		System.out.println("3- Sair");
 
-		int opcao = sc.nextInt();
-		switch (opcao) {
-		case 1:
-			int aux = pedirDesejos();
-			demonio.concedeDesejo(aux);
-			
-			
-			break;
-
-		case 2:
-			System.out.println("2 - Recarregar a lâmpada");
-	
-
-			break;
-		case 3:
-			System.out.println("2 - Recarregar a lâmpada");
-	
-
-			break;
-		}
-
-	}
 }
