@@ -2,12 +2,12 @@ package genioLampada;
 
 public class Lampada {
 
-	private int maxGenios;
+	private static int maxGenios;
 	private static int esfregadelas;
 	private int demonios;
 	private static int vezesRecarregada;
 	private int numeroDesejosEsperado;
-	private static boolean recarregar = false;
+	private static boolean isRecarregar = false;
 	private static int numgeniosDisponiveis = 0;
 
 	// construtor
@@ -19,8 +19,9 @@ public class Lampada {
 	// metodos
 
 	public static void lampadaRecarregada() {
-		setRecarregar(true);
+		setIsRecarregar(true); // pq?
 		esfregadelas = 0;
+		numgeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
 
 	}
@@ -65,7 +66,7 @@ public class Lampada {
 		return demonios;
 	}
 
-	public int getVezesRecarregada() {
+	public static int getVezesRecarregada() {
 		return vezesRecarregada;
 	}
 
@@ -74,7 +75,7 @@ public class Lampada {
 	}
 
 	public void setMaxGenios(int aMaxGenios) {
-		this.maxGenios = aMaxGenios;
+		Lampada.maxGenios = aMaxGenios;
 	}
 
 	public static void setEsfregadelas(int aEsfregadelas) {
@@ -93,12 +94,14 @@ public class Lampada {
 		this.numeroDesejosEsperado = aNumeroDesejosEsperado;
 	}
 
-	public static boolean isRecarregar() {
-		return recarregar;
+	public static boolean isRecarregar() { // get
+		// return isRecarregar();
+		return isRecarregar;
 	}
 
-	public static void setRecarregar(boolean recarregar) {
-		Lampada.recarregar = recarregar;
+	public static void setIsRecarregar(boolean aRecarregar) {
+		// Lampada.recarregar = recarregar;
+		isRecarregar = aRecarregar;
 	}
 
 }

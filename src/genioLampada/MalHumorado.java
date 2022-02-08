@@ -14,7 +14,7 @@ public class MalHumorado extends Genio {
 		System.out.println("\nIndique o seu desejo");
 		String desejoIndicado = sc.next();
 		System.out.println("Desejo: " + desejoIndicado);
-		System.out.println("\nDesejos Cumpridos! :)");
+		System.out.println("\nDesejo Cumprido! :)");
 		System.out.println("Esgotou os seus desejos :(");
 
 	}

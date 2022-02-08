@@ -1,13 +1,11 @@
 package genioLampada;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 	static Scanner sc = new Scanner(System.in);
-	static Random ran = new Random();
-	static int maxGen = ran.nextInt(6) + 1;
-	static Lampada nlampada = new Lampada(2);
+	static int randomNum = (int) (Math.random() * 2) + 1; // 1 to 100
+	static Lampada nlampada = new Lampada(randomNum);
 
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lampada Mágica!");
@@ -28,7 +26,7 @@ public class Main {
 			if (Lampada.getGeniosDisponiveis() > 0) {
 				esfregarLampada();
 			} else {
-				DemonioReciclavel.menuDemonio(); // ver
+				DemonioReciclavel.menuDemonio();
 			}
 			/*
 			 * caso nao seja, chamar o demonio, abrir menu que pergunta se é para garantir

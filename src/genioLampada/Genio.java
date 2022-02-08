@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public abstract class Genio {
 	static Scanner sc = new Scanner(System.in);
-	protected int desejosConcedidos;
+	protected static int desejosConcedidos;
 
 	protected static int max;
 
@@ -15,10 +15,10 @@ public abstract class Genio {
 
 	public abstract void concedeDesejo(int max);
 
-	public void AcresDesejos() { // Acrescimos dos desejos.
+	public static void AcresDesejos() { // Acrescimos dos desejos.
 		desejosConcedidos++;
 	}
-	
+
 	public static int pedirDesejos() {
 		System.out.println("\nQuantos desejos pretende pedir?");
 		int desejos = sc.nextInt();
@@ -39,7 +39,7 @@ public abstract class Genio {
 	}
 
 	public void setDesejosConcedidos(int desejosConcedidos) {
-		this.desejosConcedidos = desejosConcedidos;
+		Genio.desejosConcedidos = desejosConcedidos;
 	}
 
 }

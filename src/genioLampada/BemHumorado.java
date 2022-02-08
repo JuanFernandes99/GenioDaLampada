@@ -21,14 +21,15 @@ public class BemHumorado extends Genio {
 		int aux = 0; // desejos con
 		while (aux < max) {
 
-			System.out.println("\nDesejos dispon�veis: " + (max - aux));
+			System.out.println("\nDesejos disponiveis: " + (max - aux));
 			System.out.println("\nIndique o seu desejo");
 			String desejoIndicado = sc.next();
 			System.out.println("Desejo: " + desejoIndicado);
-			System.out.println("\nDesejos Cumpridos! :)");
+			System.out.println("\nDesejo Cumprido! :)");
 
 			aux++;
-
+			Genio.AcresDesejos();
+			System.out.println("Desejos concedidos: " + desejosConcedidos);
 		}
 		System.out.println("Esgotou os seus desejos :(");
 
