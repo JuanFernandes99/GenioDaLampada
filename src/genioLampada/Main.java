@@ -4,14 +4,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-
 	static Scanner sc = new Scanner(System.in);
-
 	static Random ran = new Random();
 	static int maxGen = ran.nextInt(6) + 1;
-
 	static Lampada nlampada = new Lampada(2);
-
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lampada Mágica!");
 		while (true) {
@@ -21,7 +17,6 @@ public class Main {
 
 	public static void menu() {
 
-		
 		System.out.println("\nEscolha uma das opções disponíveis:");
 		System.out.println("1 - Esfregar a Lâmpada");
 		System.out.println("2 - Sair do Jogo");
@@ -29,13 +24,11 @@ public class Main {
 		int opcao = sc.nextInt();
 		switch (opcao) {
 		case 1:
-			if (Lampada.getGeniosDisponiveis() > 0 ) {
+			if (Lampada.getGeniosDisponiveis() > 0) {
 				esfregarLampada();
-			}
-			else {
+			} else {
 				DemonioReciclavel.menuDemonio(); // ver
 			}
-		
 			/*
 			 * caso nao seja, chamar o demonio, abrir menu que pergunta se é para garantir
 			 * desejo ou recarregar lampada. Se for p/ recarregar, chamar funcao que está na
@@ -61,7 +54,7 @@ public class Main {
 		int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
 		System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
 
-		int aux = pedirDesejos();
+		int aux = Genio.pedirDesejos();
 
 		if (esfregadelas % 2 == 0) {
 
@@ -74,12 +67,6 @@ public class Main {
 			gmauHumorado.concedeDesejo(aux);
 		}
 		Lampada.setgeniosDisponiveis();
-	}
-
-	public static int pedirDesejos() {
-		System.out.println("\nQuantos desejos pretende pedir?");
-		int desejos = sc.nextInt();
-		return desejos;
 	}
 
 }

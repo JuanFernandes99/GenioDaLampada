@@ -23,7 +23,7 @@ public class DemonioReciclavel extends Genio {
 		int opcao = sc.nextInt();
 		switch (opcao) {
 		case 1:
-			int aux = Main.pedirDesejos(); // ver
+			int aux = Genio.pedirDesejos(); // ver
 			demonio.concedeDesejo(aux);
 			break;
 

@@ -1,6 +1,9 @@
 package genioLampada;
 
+import java.util.Scanner;
+
 public abstract class Genio {
+	static Scanner sc = new Scanner(System.in);
 	protected int desejosConcedidos;
 
 	protected static int max;
@@ -14,6 +17,12 @@ public abstract class Genio {
 
 	public void AcresDesejos() { // Acrescimos dos desejos.
 		desejosConcedidos++;
+	}
+	
+	public static int pedirDesejos() {
+		System.out.println("\nQuantos desejos pretende pedir?");
+		int desejos = sc.nextInt();
+		return desejos;
 	}
 
 	// SETTERS E GETTERS
