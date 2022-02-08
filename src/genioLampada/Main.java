@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	static Scanner sc = new Scanner(System.in);
-	static int randomNum = (int) (Math.random() * 2) + 1; // 1 to 100
+	static int randomNum = (int) (Math.random() * 2) + 1; // 1 to 1
 	static Lampada nlampada = new Lampada(randomNum);
 
 	public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class Main {
 						+ "2. O jogador decide quantas vezes quer esfregar a lâmpada;\n"
 						+ "3. O jogador pede quantos desejos quer ver realizados;\n" + "4. BOOOM!!! Sai o génio;\n"
 						+ "\nA sequência será repetida pelo jogador do ponto 2 até ao ponto 4.\n" + "Atenção!!!\n"
-						+ "\nO jogador decide quando acabar o jogo a qualquer momento através da opção disponível “sair do jogo”;\n");
+						+ "\nO jogador decide quando acabar o jogo a qualquer momento através da opção disponível “sair do jogo”;");
 			break;
 		
 		
