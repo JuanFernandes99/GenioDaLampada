@@ -77,6 +77,7 @@ public class Main {
 		}
 	}
 
+	// perguntar se é possivel criar uma classe, e meter isto lá dentro! 
 	public static void instrucoes() {
 
 		System.out.println(" Instruções\n" + "\n"
