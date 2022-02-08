@@ -26,20 +26,14 @@ public class DemonioReciclavel extends Genio {
 			int aux = Genio.pedirDesejos(); // ver
 			demonio.concedeDesejo(aux);
 			break;
-
+			
 		case 2:
 			System.out.println("2 - Recarregar a lâmpada");
-	
-
 			break;
+			
 		case 3:
 			System.out.println("2 - Recarregar a lâmpada");
-	
-
 			break;
 		}
-
 	}
-
-
 }

@@ -8,6 +8,7 @@ public class Main {
 	static Random ran = new Random();
 	static int maxGen = ran.nextInt(6) + 1;
 	static Lampada nlampada = new Lampada(2);
+
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lampada Mágica!");
 		while (true) {
