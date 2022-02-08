@@ -14,60 +14,6 @@ public class Main {
 		}
 	}
 	
-	
-	
-	
-	
-/*
- * public static void esfregarLampada() {
-
-		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
-
-		int esfregadelas = sc.nextInt();
-
-		Lampada.esfregar(esfregadelas);
-
-		if (esfregadelas <= 0) {
-
-			System.out.println("\n numero tem de ser superior a 0");
-
-			esfregarLampada();
-
-		}
-
-		else if (esfregadelas != 0) {
-
-			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
-			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + "vezes");
-
-			int aux = pedirDesejos();
-
-			if (esfregadelas % 2 == 0) {
-
-				BemHumorado gBemHumorado = new BemHumorado();
-				gBemHumorado.concedeDesejo(aux);
-
-			} else {
-
-				MalHumorado gmauHumorado = new MalHumorado();
-				gmauHumorado.concedeDesejo(aux);
-			}
-
-			Lampada.setgeniosDisponiveis();
-		}
-
-	}
-
- * 
- * 
- * 
- * */
-	
-	
-	
-	
-	
-	
 	public static void menu() {
 
 		System.out.println("\nEscolha uma das opções disponíveis:");
@@ -115,15 +61,12 @@ public class Main {
 	public static void esfregarLampada() {
 		
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
-
 		int esfregadelas = sc.nextInt();
-
 		Lampada.esfregar(esfregadelas);
 
 		if (esfregadelas <= 0) {
 
 			System.out.println("\nO número deve ser superior a zero.");
-
 			esfregarLampada();
 
 		}
@@ -132,11 +75,9 @@ public class Main {
 
 			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
 			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + "vezes");
-
 			int aux = Genio.pedirDesejos();
 
 			if (esfregadelas % 2 == 0) {
-
 				BemHumorado gBemHumorado = new BemHumorado();
 				gBemHumorado.concedeDesejo(aux);
 
@@ -145,7 +86,6 @@ public class Main {
 				MalHumorado gmauHumorado = new MalHumorado();
 				gmauHumorado.concedeDesejo(aux);
 			}
-
 			Lampada.setgeniosDisponiveis();
 
 		}
