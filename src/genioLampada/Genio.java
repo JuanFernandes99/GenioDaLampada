@@ -6,6 +6,7 @@ public abstract class Genio {
 	static Scanner sc = new Scanner(System.in);
 	protected static int desejosConcedidos;
 	protected static int maxDesejos;
+
 	public abstract void concedeDesejo(int maxDesejos);
 
 	// CONSTRUTOR
@@ -19,9 +20,13 @@ public abstract class Genio {
 	}
 
 	public static int pedirDesejos() {
+
 		System.out.println("\nQuantos desejos pretende pedir?");
+
 		int desejos = sc.nextInt();
+
 		if (desejos <= 0) {
+
 			System.out.println("O número de desejos deve ser superior a 0 ");
 			pedirDesejos();
 

@@ -1,11 +1,12 @@
 package genioLampada;
 
-import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class DemonioReciclavel extends Genio {
-	static Scanner sc = new Scanner(System.in);
-	 protected int desejoDisponivelDemonio; // ver
-	
+	static DemonioReciclavel demonio = new DemonioReciclavel();
+
+	protected int desejoDisponivelDemonio;
+
 	public DemonioReciclavel() {
 
 	}
@@ -26,37 +27,53 @@ public class DemonioReciclavel extends Genio {
 		}
 	}
 
-	public static void menuDemonio() {
+	public static void invocaDemonio() {
 		System.out.println("OlÃ¡, eu sou demonio e lhe concederei todos os desejos que vocÃª me pedir\n");
-		DemonioReciclavel demonio = new DemonioReciclavel();
 
+		menuDemonio();
+
+		try {
+			int opcao = sc.nextInt();
+			switch (opcao) {
+			case 1:
+				continuarDesejoDemonio();
+				break;
+
+			case 2:
+				Lampada.lampadaRecarregada();
+				break;
+
+			case 3:
+				System.exit(0);
+				break;
+
+			default:
+				System.out.println("Só é permitido números entre 1-3 , try again");
+				invocaDemonio();
+			}
+
+		} catch (InputMismatchException e) {
+			Genio.sc.nextLine();
+			System.out.println("Só é permitido números inteiros,  try again");
+			invocaDemonio();
+		}
+
+	}
+
+	public static void menuDemonio() {
 		System.out.println("1 - Pedir desejos");
 		System.out.println("2 - Recarregar a lÃ¢mpada");
 		System.out.println("3- Sair");
 
-		int opcao = sc.nextInt();
-		switch (opcao) {
-		case 1:
-			int aux = Genio.pedirDesejos();
-			demonio.concedeDesejo(aux);
-			while (Lampada.isRecarregar() == false) {
-				menuDemonio();
-			}
-			break;
+	}
 
-		case 2:
-			Lampada.lampadaRecarregada();
-			System.out.println("Vezes recarregada: " + Lampada.getVezesRecarregada());
-			break;
-
-		case 3:
-			System.out.println("sair do Jogo");
-			System.exit(0);
-			break;
-			
-		default: 
-			System.out.println("Só é permitido números entre 1-3 , try again");
+	public static void continuarDesejoDemonio() {
+		int aux = Genio.pedirDesejos();
+		demonio.concedeDesejo(aux);
+		while (Lampada.isRecarregar() == false) {
+			invocaDemonio();
 		}
+
 	}
 
 	public int getDesejoDisponivelDemonio() {
@@ -66,7 +83,5 @@ public class DemonioReciclavel extends Genio {
 	public void setDesejoDisponivelDemonio(int aDesejoDisponivelDemonio) {
 		this.desejoDisponivelDemonio = aDesejoDisponivelDemonio;
 	}
-
-
 
 }

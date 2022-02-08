@@ -21,6 +21,7 @@ public class Lampada {
 		esfregadelas = 0;
 		numgeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
+		System.out.println("Vezes recarregada: " + Lampada.getVezesRecarregada());
 
 	}
 

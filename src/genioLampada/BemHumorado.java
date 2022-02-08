@@ -1,13 +1,9 @@
 package genioLampada;
 
-import java.util.Scanner;
-
 public class BemHumorado extends Genio {
-	
-	static Scanner sc = new Scanner(System.in);
-	
+
 	// atributos
-	protected int desejoDisponivelBemHumorado;  // perguntar isto
+	protected int desejoDisponivelBemHumorado; // perguntar isto
 
 	// construtor
 	public BemHumorado() {
@@ -32,7 +28,7 @@ public class BemHumorado extends Genio {
 		System.out.println("Esgotou os seus desejos :(");
 	}
 
-	//getters e setters
+	// getters e setters
 	public int getDesejoDisponivelBemHumorado() {
 		return desejoDisponivelBemHumorado;
 	}
@@ -40,6 +36,5 @@ public class BemHumorado extends Genio {
 	public void setDesejoDisponivelBemHumorado(int aDesejoDisponivelBemHumorado) {
 		this.desejoDisponivelBemHumorado = aDesejoDisponivelBemHumorado;
 	}
-
 
 }
