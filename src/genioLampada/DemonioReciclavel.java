@@ -29,19 +29,11 @@ public class DemonioReciclavel extends Genio {
 	}
 
 	public static void menuDemonio() {
-<<<<<<< HEAD
-		System.out.println("Olá, eu sou demonio e lhe concederei todos os desejos que você me pedir");
-=======
-		System.out.println("Ol�, eu sou demonio e lhe concederei todos os desejos que voc� me pedir");
->>>>>>> a717ef2d08e23641c55ff72763d6c36d17b477d0
+		System.out.println("OlÃ¡, eu sou demonio e lhe concederei todos os desejos que vocÃª me pedir");
 		DemonioReciclavel demonio = new DemonioReciclavel();
 
 		System.out.println("1 - Pedir desejos?");
-<<<<<<< HEAD
-		System.out.println("2 - Recarregar a lâmpada");
-=======
-		System.out.println("2 - Recarregar a l�mpada");
->>>>>>> a717ef2d08e23641c55ff72763d6c36d17b477d0
+		System.out.println("2 - Recarregar a lÃ¢mpada");
 		System.out.println("3- Sair");
 
 		int opcao = sc.nextInt();
@@ -55,23 +47,16 @@ public class DemonioReciclavel extends Genio {
 			break;
 
 		case 2:
-<<<<<<< HEAD
 			isO = false; // melhorar
 			Lampada.lampadaRecarregada();
 			System.out.println("Vezes recarregada: " + Lampada.getVezesRecarregada());
-=======
-			System.out.println("2 - Recarregar a l�mpada");
->>>>>>> a717ef2d08e23641c55ff72763d6c36d17b477d0
 			break;
 
 		case 3:
-<<<<<<< HEAD
 			System.out.println("sair do Jogo");
 			System.exit(0);
-=======
-			System.out.println("3 - Sair");
->>>>>>> a717ef2d08e23641c55ff72763d6c36d17b477d0
 			break;
 		}
 	}
 }
+

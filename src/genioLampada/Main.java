@@ -8,7 +8,7 @@ public class Main {
 	static Lampada nlampada = new Lampada(randomNum);
 
 	public static void main(String[] args) {
-		System.out.println("Bem-vindo ao jogo da Lampada Mágica!");
+		System.out.println("Bem-vindo ao jogo da Lampada MÃ¡gica!");
 		while (true) {
 			menu();
 		}
@@ -16,8 +16,8 @@ public class Main {
 
 	public static void menu() {
 
-		System.out.println("\nEscolha uma das opções disponíveis:");
-		System.out.println("1 - Esfregar a Lâmpada");
+		System.out.println("\nEscolha uma das opÃ§Ãµes disponÃ­veis:");
+		System.out.println("1 - Esfregar a LÃ¢mpada");
 		System.out.println("2 - Sair do Jogo");
 
 		int opcao = sc.nextInt();
@@ -29,10 +29,10 @@ public class Main {
 				DemonioReciclavel.menuDemonio();
 			}
 			/*
-			 * caso nao seja, chamar o demonio, abrir menu que pergunta se é para garantir
-			 * desejo ou recarregar lampada. Se for p/ recarregar, chamar funcao que está na
-			 * lampada atualizar o numero de genios disponiveis com o número aleatorio dado
-			 * na criaçao da lampada
+			 * caso nao seja, chamar o demonio, abrir menu que pergunta se Ã© para garantir
+			 * desejo ou recarregar lampada. Se for p/ recarregar, chamar funcao que estÃ¡ na
+			 * lampada atualizar o numero de genios disponiveis com o nÃºmero aleatorio dado
+			 * na criaÃ§ao da lampada
 			 */
 			break;
 
@@ -47,11 +47,11 @@ public class Main {
 
 	public static void esfregarLampada() {
 
-		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
+		System.out.println("Quantas vezes deseja esfregar a lÃ¢mpada?");
 		int esfregadelas = sc.nextInt();
 		Lampada.esfregar(esfregadelas);
 		int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
-		System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
+		System.out.println("Esfregou a lÃ¢mpada: " + esfregadelasAcumuladas + " vezes");
 
 		int aux = Genio.pedirDesejos();
 
