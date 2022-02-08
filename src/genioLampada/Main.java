@@ -1,18 +1,24 @@
 package genioLampada;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
 	static Scanner sc = new Scanner(System.in);
-	static int randomNum = (int) (Math.random() * 2) + 1; // 1 to 1
+	static int randomNum = (int) (Math.random() * 3) + 1; // 1 to 2
 	static Lampada nlampada = new Lampada(randomNum);
 
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lampada Mágica!");
 		while (true) {
-			menu();
+			try {
+				menu();
+			}catch (InputMismatchException e) {
+				 sc.nextLine();
+				  System.out.println("Só é permitido números inteiros,  try again" );
+				  }
 		}
-	}
+		}
 	
 	public static void menu() {
 
@@ -23,43 +29,38 @@ public class Main {
 
 		int opcao = sc.nextInt();
 		switch (opcao) {
-		
-			case 1:
-				System.out.println(" Instruções\n" + "\n"
-						+ "Este jogo realiza-se dentro de uma Lâmpada Mágica que contêm génios indeterminados. \nO objetivo é iniciar a lâmpada, chamar génios e pedir desejos, que determinam se irá sair um génio bem-humorado ou mal-humorado.\nTenta a tua sorte e vê o que acontece no final!\n"
-						+ "\n" + "Passos:\n" + "\n" + "1. O jogador tem de iniciar a lâmpada;\n"
-						+ "2. O jogador decide quantas vezes quer esfregar a lâmpada;\n"
-						+ "3. O jogador pede quantos desejos quer ver realizados;\n" + "4. BOOOM!!! Sai o génio;\n"
-						+ "\nA sequência será repetida pelo jogador do ponto 2 até ao ponto 4.\n" + "Atenção!!!\n"
-						+ "\nO jogador decide quando acabar o jogo a qualquer momento através da opção disponível “sair do jogo”;");
+
+		case 1:
+			System.out.println(" Instruções\n" + "\n"
+					+ "Este jogo realiza-se dentro de uma Lâmpada Mágica que contêm génios indeterminados. \nO objetivo é iniciar a lâmpada, chamar génios e pedir desejos, que determinam se irá sair um génio bem-humorado ou mal-humorado.\nTenta a tua sorte e vê o que acontece no final!\n"
+					+ "\n" + "Passos:\n" + "\n" + "1. O jogador tem de iniciar a lâmpada;\n"
+					+ "2. O jogador decide quantas vezes quer esfregar a lâmpada;\n"
+					+ "3. O jogador pede quantos desejos quer ver realizados;\n" + "4. BOOOM!!! Sai o génio;\n"
+					+ "\nA sequência será repetida pelo jogador do ponto 2 até ao ponto 4.\n" + "Atenção!!!\n"
+					+ "\nO jogador decide quando acabar o jogo a qualquer momento através da opção disponível “sair do jogo”;");
 			break;
-		
-		
-			case 2:
-				if (Lampada.getGeniosDisponiveis() > 0) {
-					esfregarLampada();
-				} else {
-					DemonioReciclavel.menuDemonio();
-				}
-				/*
-				 * caso nao seja, chamar o demonio, abrir menu que pergunta se Ã© para garantir
-				 * desejo ou recarregar lampada. Se for p/ recarregar, chamar funcao que estÃ¡ na
-				 * lampada atualizar o numero de genios disponiveis com o nÃºmero aleatorio dado
-				 * na criaÃ§ao da lampada
-				 */
+		case 2:
+			
+			if (Lampada.getGeniosDisponiveis() > 0) {
+				esfregarLampada();
+			} else {
+				DemonioReciclavel.menuDemonio(); //  tratar o error
+			}
 			break;
 
-			case 3:
-				System.out.println("2 - Sair");
-				System.exit(0);
-
+		case 3:
+			System.out.println("2 - Sair");
+			System.exit(0);
 			break;
+			
+			default: 
+				System.out.println("Só é permitido números entre 1-3 , try again");
 		}
 
 	}
 
 	public static void esfregarLampada() {
-		
+
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
 		int esfregadelas = sc.nextInt();
 		Lampada.esfregar(esfregadelas);
@@ -73,19 +74,19 @@ public class Main {
 
 		else if (esfregadelas != 0) {
 
-			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
-			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + "vezes");
 			int aux = Genio.pedirDesejos();
-
+			
 			if (esfregadelas % 2 == 0) {
 				BemHumorado gBemHumorado = new BemHumorado();
 				gBemHumorado.concedeDesejo(aux);
 
 			} else {
-
+				
 				MalHumorado gmauHumorado = new MalHumorado();
 				gmauHumorado.concedeDesejo(aux);
 			}
+			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
+			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
 			Lampada.setgeniosDisponiveis();
 
 		}

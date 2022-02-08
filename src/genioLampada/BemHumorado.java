@@ -3,36 +3,43 @@ package genioLampada;
 import java.util.Scanner;
 
 public class BemHumorado extends Genio {
+	
 	static Scanner sc = new Scanner(System.in);
+	
+	// atributos
+	protected int desejoDisponivelBemHumorado;  // perguntar isto
 
-	protected int desejoDisponivel;
-	protected int auxiliarGenio;
-
+	// construtor
 	public BemHumorado() {
 
 	}
 
-	public int desejoDisponivel() {
-		return getMax() - getDesejosConcedidos();
-	}
-
-	public void concedeDesejo(int max) {
-		System.out.println("OlÃ¡, eu sou o gÃªnio bem-humorado e lhe concederei todos os desejos que vocÃª me pedir");
-		int aux = 0; // desejos con
-		while (aux < max) {
-
-			System.out.println("\nDesejos disponiveis: " + (max - aux));
+// métodos
+	public void concedeDesejo(int maxDesejos) {
+		System.out.println("Ola¡, eu sou o genio bem-humorado e lhe concederei todos os desejos que voce me pedir");
+		int aux = 0;
+		while (aux < maxDesejos) {
+			desejoDisponivelBemHumorado = maxDesejos - aux;
+			System.out.println("\nDesejos disponiveis: " + (desejoDisponivelBemHumorado));
 			System.out.println("\nIndique o seu desejo");
 			String desejoIndicado = sc.next();
 			System.out.println("Desejo: " + desejoIndicado);
 			System.out.println("\nDesejo Cumprido! :)");
-
 			aux++;
 			Genio.AcresDesejos();
 			System.out.println("Desejos concedidos: " + desejosConcedidos);
 		}
 		System.out.println("Esgotou os seus desejos :(");
-
 	}
+
+	//getters e setters
+	public int getDesejoDisponivelBemHumorado() {
+		return desejoDisponivelBemHumorado;
+	}
+
+	public void setDesejoDisponivelBemHumorado(int aDesejoDisponivelBemHumorado) {
+		this.desejoDisponivelBemHumorado = aDesejoDisponivelBemHumorado;
+	}
+
 
 }

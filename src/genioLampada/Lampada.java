@@ -4,9 +4,7 @@ public class Lampada {
 
 	private static int maxGenios;
 	private static int esfregadelas;
-	private int demonios;
 	private static int vezesRecarregada;
-	private int numeroDesejosEsperado;
 	private static boolean isRecarregar = false;
 	private static int numgeniosDisponiveis = 0;
 
@@ -19,7 +17,7 @@ public class Lampada {
 	// metodos
 
 	public static void lampadaRecarregada() {
-		setIsRecarregar(true); // pq?
+		setIsRecarregar(true);
 		esfregadelas = 0;
 		numgeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
@@ -34,10 +32,6 @@ public class Lampada {
 	public static int quantidadeEsfregadelas() {
 
 		return esfregadelas;
-
-	}
-
-	public void selecionarGenio() {
 
 	}
 
@@ -62,16 +56,8 @@ public class Lampada {
 		return esfregadelas;
 	}
 
-	public int getDemonios() {
-		return demonios;
-	}
-
 	public static int getVezesRecarregada() {
 		return vezesRecarregada;
-	}
-
-	public int getNumeroDesejosEsperado() {
-		return numeroDesejosEsperado;
 	}
 
 	public void setMaxGenios(int aMaxGenios) {
@@ -82,25 +68,15 @@ public class Lampada {
 		Lampada.esfregadelas = aEsfregadelas;
 	}
 
-	public void setDemonios(int aDemonios) {
-		this.demonios = aDemonios;
-	}
-
 	public void setVezesRecarregada(int aVezesRecarregada) {
 		Lampada.vezesRecarregada = aVezesRecarregada;
 	}
 
-	public void setNumeroDesejosEsperado(int aNumeroDesejosEsperado) {
-		this.numeroDesejosEsperado = aNumeroDesejosEsperado;
-	}
-
-	public static boolean isRecarregar() { // get
-		// return isRecarregar();
+	public static boolean isRecarregar() {
 		return isRecarregar;
 	}
 
 	public static void setIsRecarregar(boolean aRecarregar) {
-		// Lampada.recarregar = recarregar;
 		isRecarregar = aRecarregar;
 	}
 
