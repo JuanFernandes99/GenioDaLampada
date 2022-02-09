@@ -11,6 +11,7 @@ public class BemHumorado extends Genio {
 	}
 
 // métodos
+	@Override
 	public void concedeDesejo(int maxDesejos) {
 		System.out.println("Ola¡, eu sou o genio bem-humorado e lhe concederei todos os desejos que voce me pedir");
 		int aux = 0;
