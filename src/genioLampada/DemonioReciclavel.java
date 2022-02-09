@@ -8,7 +8,7 @@ public class DemonioReciclavel extends Genio {
 	protected int desejoDisponivelDemonio;
 
 	public DemonioReciclavel() {
-
+		desejoDisponivelDemonio = 0;
 	}
 	
 	@Override

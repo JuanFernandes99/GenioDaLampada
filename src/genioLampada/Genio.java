@@ -11,7 +11,8 @@ public abstract class Genio {
 
 	// CONSTRUTOR
 	public Genio() {
-
+		desejosConcedidos = 0;
+		maxDesejos = 0;
 	}
 
 	// metodos

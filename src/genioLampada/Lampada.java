@@ -5,13 +5,16 @@ public class Lampada {
 	private static int maxGenios;
 	private static int esfregadelas;
 	private static int vezesRecarregada;
-	private static boolean isRecarregar = false;
-	private static int numgeniosDisponiveis = 0;
+	private static boolean isRecarregar;
+	private static int numgeniosDisponiveis;
 
 	// construtor
 	public Lampada(int aMaxGenios) {
 		maxGenios = aMaxGenios;
 		numgeniosDisponiveis = aMaxGenios;
+		isRecarregar = false;
+		esfregadelas = 0;
+		vezesRecarregada = 0;
 	}
 
 	// metodos

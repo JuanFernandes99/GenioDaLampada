@@ -7,7 +7,7 @@ public class BemHumorado extends Genio {
 
 	// construtor
 	public BemHumorado() {
-
+		desejoDisponivelBemHumorado = 0;
 	}
 
 // métodos
