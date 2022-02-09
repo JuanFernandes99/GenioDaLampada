@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 
 // comentar codigo, scrum, verificaçao 
+// verificar nomes de funçoes e atributos
 public class Main {
 	static Scanner sc = new Scanner(System.in);
 	static int randomNum = (int) (Math.random() * 3) + 1; // 1 to 2
