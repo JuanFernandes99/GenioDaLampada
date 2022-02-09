@@ -34,7 +34,7 @@ public class BemHumorado extends Genio {
 	}
 
 	public void setDesejoDisponivelBemHumorado(int aDesejoDisponivelBemHumorado) {
-		this.desejoDisponivelBemHumorado = aDesejoDisponivelBemHumorado;
+		desejoDisponivelBemHumorado = aDesejoDisponivelBemHumorado;
 	}
 
 }

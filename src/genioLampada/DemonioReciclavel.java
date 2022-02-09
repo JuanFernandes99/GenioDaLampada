@@ -81,7 +81,7 @@ public class DemonioReciclavel extends Genio {
 	}
 
 	public void setDesejoDisponivelDemonio(int aDesejoDisponivelDemonio) {
-		this.desejoDisponivelDemonio = aDesejoDisponivelDemonio;
+		desejoDisponivelDemonio = aDesejoDisponivelDemonio;
 	}
 
 }
