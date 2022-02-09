@@ -44,6 +44,8 @@ public class Main {
 		}
 	}
 
+	
+	// otimizar a funçao 
 	public static void esfregarLampada() {
 
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
