@@ -10,7 +10,7 @@ public class DemonioReciclavel extends Genio {
 	public DemonioReciclavel() {
 		desejoDisponivelDemonio = 0;
 	}
-	
+
 	@Override
 	public void concedeDesejo(int maxDesejos) {
 

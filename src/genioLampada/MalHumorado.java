@@ -5,7 +5,7 @@ public class MalHumorado extends Genio {
 	public MalHumorado() {
 
 	}
-	
+
 	@Override
 	public void concedeDesejo(int maxDesejos) {
 		System.out.println("OlÃ¡, eu sou o gÃªnio mal-humorado e lhe concederei apenas o seu primeiro desejo.");

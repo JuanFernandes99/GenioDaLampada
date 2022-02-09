@@ -3,10 +3,11 @@ package genioLampada;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
 // comentar codigo, scrum, verificaçao 
 // verificar nomes de funçoes e atributos
 // perguntar se é preciso inicializar todas as variaveis
+// meters os getters e setters, construtores, etc
+
 public class Main {
 	static Scanner sc = new Scanner(System.in);
 	static int randomNum = (int) (Math.random() * 3) + 1; // 1 to 2
@@ -49,8 +50,7 @@ public class Main {
 		}
 	}
 
-	
-	// otimizar a funçao 
+	// otimizar a funçao
 	public static void esfregarLampada() {
 
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
@@ -84,7 +84,7 @@ public class Main {
 		}
 	}
 
-	// perguntar se é possivel criar uma classe, e meter isto lá dentro! 
+	// perguntar se é possivel criar uma classe, e meter isto lá dentro!
 	public static void instrucoes() {
 
 		System.out.println(" Instruções\n" + "\n"
