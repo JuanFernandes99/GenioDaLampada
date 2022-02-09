@@ -3,6 +3,8 @@ package genioLampada;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
+// comentar codigo, scrum, verificaçao 
 public class Main {
 	static Scanner sc = new Scanner(System.in);
 	static int randomNum = (int) (Math.random() * 3) + 1; // 1 to 2
@@ -15,6 +17,7 @@ public class Main {
 		}
 	}
 
+	// otimizar
 	public static void inicioJogo() {
 		menu();
 		try {
