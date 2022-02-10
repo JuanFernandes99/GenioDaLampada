@@ -2,12 +2,12 @@ package genioLampada;
 
 public class Lampada {
 	// Atributo(s)
-	private static int maxGenios;
-	private static boolean isRecarregar;
-	private static Integer esfregadelas;
-	private static Integer vezesRecarregada;
-	private static Integer numgeniosDisponiveis;
-	private static Integer esfregadelasAcumuladas;
+	private static  int maxGenios;
+	private static  boolean isRecarregar;
+	private static  Integer esfregadelas;
+	private static  Integer vezesRecarregada;
+	private static  Integer numgeniosDisponiveis;
+	private static  Integer esfregadelasAcumuladas;
 
 	// Construtor(es)
 	public Lampada(int aMaxGenios) {
