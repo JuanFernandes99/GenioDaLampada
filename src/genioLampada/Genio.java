@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public abstract class Genio {
 	static Scanner sc = new Scanner(System.in);
-	protected static int desejosConcedidos;
-	protected static int maxDesejos;
+	protected static Integer desejosConcedidos;
+	protected static Integer maxDesejos;
 
 	public abstract void concedeDesejo(int maxDesejos);
 
@@ -37,19 +37,19 @@ public abstract class Genio {
 	}
 
 	// setters e getters
-	public int getDesejosConcedidos() {
+	public Integer getDesejosConcedidos() {
 		return desejosConcedidos;
 	}
 
-	public static int getMaxDesejos() {
+	public static Integer getMaxDesejos() {
 		return maxDesejos;
 	}
 
-	public static void setMaxDesejos(int aMaxDesejos) {
+	public static void setMaxDesejos(Integer aMaxDesejos) {
 		Genio.maxDesejos = aMaxDesejos;
 	}
 
-	public void setDesejosConcedidos(int aDesejosConcedidos) {
+	public void setDesejosConcedidos(Integer aDesejosConcedidos) {
 		Genio.desejosConcedidos = aDesejosConcedidos;
 	}
 

@@ -77,11 +77,11 @@ public class DemonioReciclavel extends Genio {
 
 	}
 
-	public int getDesejoDisponivelDemonio() {
+	public Integer getDesejoDisponivelDemonio() {
 		return desejoDisponivelDemonio;
 	}
 
-	public void setDesejoDisponivelDemonio(int aDesejoDisponivelDemonio) {
+	public void setDesejoDisponivelDemonio(Integer aDesejoDisponivelDemonio) {
 		desejoDisponivelDemonio = aDesejoDisponivelDemonio;
 	}
 

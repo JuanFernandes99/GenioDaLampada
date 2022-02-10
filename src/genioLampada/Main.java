@@ -79,7 +79,7 @@ public class Main {
 			}
 			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
 			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
-			Lampada.setgeniosDisponiveis();
+			Lampada.setNumgeniosDisponiveis();
 
 		}
 	}
@@ -98,7 +98,7 @@ public class Main {
 
 	public static void jogar() {
 
-		if (Lampada.getGeniosDisponiveis() > 0) {
+		if (Lampada.getNumgeniosDisponiveis() > 0) {
 			esfregarLampada();
 		} else {
 			DemonioReciclavel.invocaDemonio(); // tratar o error

@@ -41,13 +41,13 @@ public class Lampada {
 
 	// getters e setters
 
-	public static void setgeniosDisponiveis() {
+	public static void setNumgeniosDisponiveis() {
 		Lampada.numgeniosDisponiveis--;
 		System.out.println("numgeniosDisponiveis: " + numgeniosDisponiveis);
 
 	}
 
-	public static int getGeniosDisponiveis() {
+	public static Integer getNumgeniosDisponiveis() {
 		return numgeniosDisponiveis;
 
 	}
@@ -56,11 +56,11 @@ public class Lampada {
 		return maxGenios;
 	}
 
-	public static int getEsfregadelas() {
+	public static Integer getEsfregadelas() {
 		return esfregadelas;
 	}
 
-	public static int getVezesRecarregada() {
+	public static Integer getVezesRecarregada() {
 		return vezesRecarregada;
 	}
 
@@ -68,11 +68,11 @@ public class Lampada {
 		Lampada.maxGenios = aMaxGenios;
 	}
 
-	public static void setEsfregadelas(int aEsfregadelas) {
+	public static void setEsfregadelas(Integer aEsfregadelas) {
 		Lampada.esfregadelas = aEsfregadelas;
 	}
 
-	public void setVezesRecarregada(int aVezesRecarregada) {
+	public void setVezesRecarregada(Integer aVezesRecarregada) {
 		Lampada.vezesRecarregada = aVezesRecarregada;
 	}
 
