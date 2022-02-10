@@ -14,20 +14,20 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lampada Mágica!");
 		while (true) {
-			Jogo.menu();
+			MenuJogo.menu();
 			try {
 				int opcao = sc.nextInt();
 				switch (opcao) {
 
 				case 1:
-					Jogo.instrucoes();
+					MenuJogo.instrucoes();
 					break;
 				case 2:
-					Jogo.jogar();
+					MenuJogo.jogar();
 					break;
 
 				case 3:
-					Jogo.segurancaSair();
+					MenuJogo.segurancaSair();
 					break;
 
 				default:

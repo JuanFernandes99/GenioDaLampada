@@ -2,7 +2,7 @@ package genioLampada;
 
 import java.util.InputMismatchException;
 
-public class Jogo {
+public class MenuJogo {
 
 	public static void instrucoes() {
 

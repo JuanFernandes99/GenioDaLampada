@@ -52,7 +52,7 @@ public class Demonio extends Genio {
 
 			case 3:
 				isSair = true;
-				Jogo.segurancaSair();
+				MenuJogo.segurancaSair();
 				System.exit(0);
 				break;
 
