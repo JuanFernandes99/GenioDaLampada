@@ -3,7 +3,7 @@ package genioLampada;
 public class BemHumorado extends Genio {
 
 	// atributos
-	protected int desejoDisponivelBemHumorado; // perguntar isto
+	protected Integer desejoDisponivelBemHumorado; // perguntar isto
 
 	// construtor
 	public BemHumorado() {

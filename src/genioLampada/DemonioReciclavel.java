@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 public class DemonioReciclavel extends Genio {
 	static DemonioReciclavel demonio = new DemonioReciclavel();
 
-	protected int desejoDisponivelDemonio;
+	protected Integer desejoDisponivelDemonio;
 
 	public DemonioReciclavel() {
 		desejoDisponivelDemonio = 0;

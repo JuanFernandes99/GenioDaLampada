@@ -3,10 +3,10 @@ package genioLampada;
 public class Lampada {
 
 	private static int maxGenios;
-	private static int esfregadelas;
-	private static int vezesRecarregada;
+	private static Integer esfregadelas;
+	private static Integer vezesRecarregada;
 	private static boolean isRecarregar;
-	private static int numgeniosDisponiveis;
+	private static Integer numgeniosDisponiveis;
 
 	// construtor
 	public Lampada(int aMaxGenios) {
