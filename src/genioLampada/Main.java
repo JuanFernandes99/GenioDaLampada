@@ -36,7 +36,7 @@ public class Main {
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("Só é permitido números inteiros,  try again");
-				sc.nextLine();
+				sc.next();
 			}
 		}
 	}
