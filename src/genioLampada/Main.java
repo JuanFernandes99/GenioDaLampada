@@ -31,12 +31,12 @@ public class Main {
 					break;
 
 				default:
-					System.out.println("Só é permitido números entre 1-3, tente novamente");
+					System.out.println("Só é permitido números entre 1-3 , try again");
 
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("Só é permitido números inteiros, tente novamente");
-				sc.next();
+				System.out.println("Só é permitido números inteiros,  try again");
+				sc.nextLine();
 			}
 		}
 	}

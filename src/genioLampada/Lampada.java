@@ -2,64 +2,85 @@ package genioLampada;
 
 public class Lampada {
 	// Atributo(s)
+<<<<<<< HEAD
 	private static  int maxGenios;
 	private static  boolean isRecarregar;
 	private static  Integer esfregadelas;
 	private static  Integer vezesRecarregada;
 	private static  Integer numgeniosDisponiveis;
 	private static  Integer esfregadelasAcumuladas;
+=======
+	private static int maxGenios;
+	private static Integer esfregadelas;
+	private static Integer vezesRecarregada;
+	private static boolean isRecarregar;
+	private static Integer numgeniosDisponiveis;
+>>>>>>> parent of 9f8fe22 (Atualizado!)
 
-	// Construtor(es)
+	 // Construtor(es)
 	public Lampada(int aMaxGenios) {
 		maxGenios = aMaxGenios;
 		numgeniosDisponiveis = aMaxGenios;
 		isRecarregar = false;
 		esfregadelas = 0;
 		vezesRecarregada = 0;
-		esfregadelasAcumuladas = 0;
 	}
 
-	// Método(s)
+	 // Método(s)
 	public static void lampadaRecarregada() {
 		setIsRecarregar(true);
 		esfregadelas = 0;
 		numgeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
-		System.out.println("Vezes recarregada: " + vezesRecarregada);
+		System.out.println("Vezes recarregada: " + Lampada.getVezesRecarregada());
+
 	}
 
-	public static void esfregar(int aNovasEsfregadelas) {
-		esfregadelas = esfregadelas + aNovasEsfregadelas;
+	public static void esfregar(int novasEsfregadelas) {
+		esfregadelas = esfregadelas + novasEsfregadelas;
+
+	}
+
+	public static int quantidadeEsfregadelas() {
+
+		return esfregadelas;
 
 	}
 
 	public static void esfregarLampada() {
 
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
-		esfregadelas = Main.sc.nextInt();
+		int esfregadelas = Main.sc.nextInt(); // verificar isto
 
-		esfregar(esfregadelas);
+		Lampada.esfregar(esfregadelas);
 
 		if (esfregadelas <= 0) {
+
 			System.out.println("\nO número deve ser superior a zero.");
 			esfregarLampada();
 
-		} else if (esfregadelas != 0) {
+		}
+
+		else if (esfregadelas != 0) {
+
+			int aux = Genio.pedirDesejos();
 
 			if (esfregadelas % 2 == 0) {
 				GBemHumorado gBemHumorado = new GBemHumorado();
-				gBemHumorado.concedeDesejo(Genio.pedirDesejos());
+				gBemHumorado.concedeDesejo(aux);
 
 			} else {
 
 				GMalHumorado gMalHumorado = new GMalHumorado();
-				gMalHumorado.concedeDesejo(Genio.pedirDesejos());
+				gMalHumorado.concedeDesejo(aux);
 			}
-			esfregadelasAcumuladas = esfregadelas;
+			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
 			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
-			setNumgeniosDisponiveis();
+			Lampada.setNumgeniosDisponiveis();
+
 		}
 	}
+
 	// Getters e Setters
 
 
@@ -80,26 +101,22 @@ public class Lampada {
 		return vezesRecarregada;
 	}
 
-	public static Integer getEsfregadelasAcumuladas() {
-		return esfregadelasAcumuladas;
-	}
-
 	public void setMaxGenios(int aMaxGenios) {
-		maxGenios = aMaxGenios;
+		Lampada.maxGenios = aMaxGenios;
 	}
 
 	public static void setNumgeniosDisponiveis() {
-		numgeniosDisponiveis--;
+		Lampada.numgeniosDisponiveis--;
 		System.out.println("numgeniosDisponiveis: " + numgeniosDisponiveis);
 
 	}
 
 	public static void setEsfregadelas(Integer aEsfregadelas) {
-		esfregadelas = aEsfregadelas;
+		Lampada.esfregadelas = aEsfregadelas;
 	}
 
 	public void setVezesRecarregada(Integer aVezesRecarregada) {
-		vezesRecarregada = aVezesRecarregada;
+		Lampada.vezesRecarregada = aVezesRecarregada;
 	}
 
 	public static boolean isRecarregar() {
@@ -110,7 +127,4 @@ public class Lampada {
 		isRecarregar = aRecarregar;
 	}
 
-	public static void setEsfregadelasAcumuladas(Integer aEsfregadelasAcumuladas) {
-		esfregadelasAcumuladas = aEsfregadelasAcumuladas;
-	}
 }

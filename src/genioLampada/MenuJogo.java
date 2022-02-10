@@ -45,7 +45,7 @@ public class MenuJogo {
 				break;
 			case 2:
 				System.out.println("Bem-vindos novamente!\n");
-				if (Demonio.isSair()) { // feito para reduzir o codigo
+				if (Demonio.isSair()) { //  feito para reduzir o codigo
 					Demonio.invocaDemonio();
 				} else {
 					Main.main(null);

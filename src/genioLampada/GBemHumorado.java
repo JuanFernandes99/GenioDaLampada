@@ -2,17 +2,18 @@ package genioLampada;
 
 public class GBemHumorado extends Genio {
 
+
 	// Atributo(s)
 
 	private Integer desejoDisponivelBemHumorado;
 
-	// Construtor(es)
+	 // Construtor(es)
 	public GBemHumorado() {
 		desejoDisponivelBemHumorado = 0;
 	}
 
-	// Método(s)
-
+	 // Método(s)
+	
 	@Override
 	public void concedeDesejo(int maxDesejos) {
 		System.out.println("Ola¡, eu sou o genio bem-humorado e lhe concederei todos os desejos que voce me pedir");
@@ -31,7 +32,7 @@ public class GBemHumorado extends Genio {
 		System.out.println("Esgotou os seus desejos :(");
 	}
 
-	// Getters e Setters
+	  // Getters e Setters
 	public Integer getDesejoDisponivelBemHumorado() {
 		return desejoDisponivelBemHumorado;
 	}
