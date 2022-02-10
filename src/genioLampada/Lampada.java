@@ -1,14 +1,14 @@
 package genioLampada;
 
 public class Lampada {
-
+	// Atributo(s)
 	private static int maxGenios;
 	private static Integer esfregadelas;
 	private static Integer vezesRecarregada;
 	private static boolean isRecarregar;
 	private static Integer numgeniosDisponiveis;
 
-	// construtor
+	 // Construtor(es)
 	public Lampada(int aMaxGenios) {
 		maxGenios = aMaxGenios;
 		numgeniosDisponiveis = aMaxGenios;
@@ -17,8 +17,7 @@ public class Lampada {
 		vezesRecarregada = 0;
 	}
 
-	// metodos
-
+	 // Método(s)
 	public static void lampadaRecarregada() {
 		setIsRecarregar(true);
 		esfregadelas = 0;
@@ -39,13 +38,41 @@ public class Lampada {
 
 	}
 
-	// getters e setters
+	public static void esfregarLampada() {
 
-	public static void setNumgeniosDisponiveis() {
-		Lampada.numgeniosDisponiveis--;
-		System.out.println("numgeniosDisponiveis: " + numgeniosDisponiveis);
+		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
+		int esfregadelas = Main.sc.nextInt(); // verificar isto
 
+		Lampada.esfregar(esfregadelas);
+
+		if (esfregadelas <= 0) {
+
+			System.out.println("\nO número deve ser superior a zero.");
+			esfregarLampada();
+
+		}
+
+		else if (esfregadelas != 0) {
+
+			int aux = Genio.pedirDesejos();
+
+			if (esfregadelas % 2 == 0) {
+				BemHumorado gBemHumorado = new BemHumorado();
+				gBemHumorado.concedeDesejo(aux);
+
+			} else {
+
+				MalHumorado gmauHumorado = new MalHumorado();
+				gmauHumorado.concedeDesejo(aux);
+			}
+			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
+			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
+			Lampada.setNumgeniosDisponiveis();
+
+		}
 	}
+
+	// Getters e Setters
 
 	public static Integer getNumgeniosDisponiveis() {
 		return numgeniosDisponiveis;
@@ -66,6 +93,12 @@ public class Lampada {
 
 	public void setMaxGenios(int aMaxGenios) {
 		Lampada.maxGenios = aMaxGenios;
+	}
+
+	public static void setNumgeniosDisponiveis() {
+		Lampada.numgeniosDisponiveis--;
+		System.out.println("numgeniosDisponiveis: " + numgeniosDisponiveis);
+
 	}
 
 	public static void setEsfregadelas(Integer aEsfregadelas) {

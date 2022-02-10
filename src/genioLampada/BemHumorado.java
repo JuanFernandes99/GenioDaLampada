@@ -2,15 +2,18 @@ package genioLampada;
 
 public class BemHumorado extends Genio {
 
-	// atributos
+
+	// Atributo(s)
+
 	protected Integer desejoDisponivelBemHumorado; // perguntar isto
 
-	// construtor
+	 // Construtor(es)
 	public BemHumorado() {
 		desejoDisponivelBemHumorado = 0;
 	}
 
-// métodos
+	 // Método(s)
+	
 	@Override
 	public void concedeDesejo(int maxDesejos) {
 		System.out.println("Ola¡, eu sou o genio bem-humorado e lhe concederei todos os desejos que voce me pedir");
@@ -19,7 +22,7 @@ public class BemHumorado extends Genio {
 			desejoDisponivelBemHumorado = maxDesejos - aux;
 			System.out.println("\nDesejos disponiveis: " + (desejoDisponivelBemHumorado));
 			System.out.println("\nIndique o seu desejo");
-			String desejoIndicado = sc.next();
+			String desejoIndicado = Main.sc.next();
 			System.out.println("Desejo: " + desejoIndicado);
 			System.out.println("\nDesejo Cumprido! :)");
 			aux++;
@@ -29,7 +32,7 @@ public class BemHumorado extends Genio {
 		System.out.println("Esgotou os seus desejos :(");
 	}
 
-	// getters e setters
+	  // Getters e Setters
 	public Integer getDesejoDisponivelBemHumorado() {
 		return desejoDisponivelBemHumorado;
 	}

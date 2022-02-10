@@ -3,14 +3,19 @@ package genioLampada;
 import java.util.InputMismatchException;
 
 public class DemonioReciclavel extends Genio {
+	
 	static DemonioReciclavel demonio = new DemonioReciclavel();
-
+	
+	// Atributo(s)
 	protected Integer desejoDisponivelDemonio;
 
+	 // Construtor(es)
 	public DemonioReciclavel() {
 		desejoDisponivelDemonio = 0;
 	}
 
+	 // Método(s)
+	
 	@Override
 	public void concedeDesejo(int maxDesejos) {
 
@@ -19,7 +24,7 @@ public class DemonioReciclavel extends Genio {
 			desejoDisponivelDemonio = maxDesejos - aux;
 			System.out.println("\nDesejos disponiveis: " + (desejoDisponivelDemonio));
 			System.out.println("\nIndique o seu desejo");
-			String desejoIndicado = sc.next();
+			String desejoIndicado = Main.sc.next();
 			System.out.println("Desejo: " + desejoIndicado);
 			System.out.println("\nDesejo Cumprido! :)");
 			aux++;
@@ -34,7 +39,7 @@ public class DemonioReciclavel extends Genio {
 		menuDemonio();
 
 		try {
-			int opcao = sc.nextInt();
+			int opcao = Main.sc.nextInt();
 			switch (opcao) {
 			case 1:
 				continuarDesejoDemonio();
@@ -54,7 +59,7 @@ public class DemonioReciclavel extends Genio {
 			}
 
 		} catch (InputMismatchException e) {
-			Genio.sc.nextLine();
+			Main.sc.nextLine();
 			System.out.println("Só é permitido números inteiros,  try again");
 			invocaDemonio();
 		}
@@ -76,7 +81,8 @@ public class DemonioReciclavel extends Genio {
 		}
 
 	}
-
+	
+	  // Getters e Setters
 	public Integer getDesejoDisponivelDemonio() {
 		return desejoDisponivelDemonio;
 	}

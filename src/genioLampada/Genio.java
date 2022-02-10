@@ -1,21 +1,21 @@
 package genioLampada;
 
-import java.util.Scanner;
-
 public abstract class Genio {
-	static Scanner sc = new Scanner(System.in);
+	
+	// Atributo(s)
 	protected static Integer desejosConcedidos;
 	protected static Integer maxDesejos;
 
+
 	public abstract void concedeDesejo(int maxDesejos);
 
-	// CONSTRUTOR
+	 // Construtor(es)
 	public Genio() {
 		desejosConcedidos = 0;
 		maxDesejos = 0;
 	}
 
-	// metodos
+	 // Método(s)
 	public static void AcresDesejos() { // Acrescimos dos desejos.
 		desejosConcedidos++;
 	}
@@ -24,7 +24,7 @@ public abstract class Genio {
 
 		System.out.println("\nQuantos desejos pretende pedir?");
 
-		int desejos = sc.nextInt();
+		int desejos = Main.sc.nextInt();
 
 		if (desejos <= 0) {
 
@@ -36,7 +36,7 @@ public abstract class Genio {
 		return desejos;
 	}
 
-	// setters e getters
+	  // Getters e Setters
 	public Integer getDesejosConcedidos() {
 		return desejosConcedidos;
 	}
