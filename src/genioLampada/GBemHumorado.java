@@ -1,6 +1,6 @@
 package genioLampada;
 
-public class BemHumorado extends Genio {
+public class GBemHumorado extends Genio {
 
 
 	// Atributo(s)
@@ -8,7 +8,7 @@ public class BemHumorado extends Genio {
 	private Integer desejoDisponivelBemHumorado;
 
 	 // Construtor(es)
-	public BemHumorado() {
+	public GBemHumorado() {
 		desejoDisponivelBemHumorado = 0;
 	}
 

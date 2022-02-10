@@ -1,10 +1,10 @@
 package genioLampada;
 
-public class MalHumorado extends Genio {
+public class GMalHumorado extends Genio {
 
 	
 	 // Construtor(es)
-	public MalHumorado() {
+	public GMalHumorado() {
 
 	}
 	

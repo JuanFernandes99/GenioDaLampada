@@ -57,13 +57,13 @@ public class Lampada {
 			int aux = Genio.pedirDesejos();
 
 			if (esfregadelas % 2 == 0) {
-				BemHumorado gBemHumorado = new BemHumorado();
+				GBemHumorado gBemHumorado = new GBemHumorado();
 				gBemHumorado.concedeDesejo(aux);
 
 			} else {
 
-				MalHumorado gmauHumorado = new MalHumorado();
-				gmauHumorado.concedeDesejo(aux);
+				GMalHumorado gMalHumorado = new GMalHumorado();
+				gMalHumorado.concedeDesejo(aux);
 			}
 			int esfregadelasAcumuladas = Lampada.quantidadeEsfregadelas();
 			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
