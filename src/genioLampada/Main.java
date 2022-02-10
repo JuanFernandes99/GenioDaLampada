@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class Main {
 	static Scanner sc = new Scanner(System.in);
-	int numAleatorio = (int) (Math.random() * 3) + 1; // 1 to 2
-	Lampada lampada = new Lampada(numAleatorio);
+	static int numAleatorio = (int) (Math.random() * 3) + 1; // 1 to 2
+	static Lampada lampada = new Lampada(numAleatorio);
 
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lampada Mágica!");

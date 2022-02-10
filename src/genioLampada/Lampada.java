@@ -3,6 +3,7 @@ package genioLampada;
 public class Lampada {
 	// Atributo(s)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private static  int maxGenios;
 	private static  boolean isRecarregar;
 	private static  Integer esfregadelas;
@@ -18,6 +19,16 @@ public class Lampada {
 >>>>>>> parent of 9f8fe22 (Atualizado!)
 
 	 // Construtor(es)
+=======
+	private static int maxGenios;
+	private static boolean isRecarregar;
+	private static Integer esfregadelas;
+	private static Integer vezesRecarregada;
+	private static Integer numgeniosDisponiveis;
+	private static Integer esfregadelasAcumuladas;
+
+	// Construtor(es)
+>>>>>>> parent of 7dcacf1 (a)
 	public Lampada(int aMaxGenios) {
 		maxGenios = aMaxGenios;
 		numgeniosDisponiveis = aMaxGenios;
