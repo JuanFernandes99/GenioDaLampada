@@ -1,5 +1,7 @@
 package genioLampada;
 
+import java.util.InputMismatchException;
+
 public class Jogo {
 
 	public static void instrucoes() {
@@ -18,7 +20,7 @@ public class Jogo {
 		if (Lampada.getNumgeniosDisponiveis() > 0) {
 			Lampada.esfregarLampada();
 		} else {
-			DemonioReciclavel.invocaDemonio(); // tratar o error
+			Demonio.invocaDemonio();
 		}
 	}
 
@@ -27,5 +29,39 @@ public class Jogo {
 		System.out.println("1 - Instruções do Jogo");
 		System.out.println("2 - Esfregar a Lâmpada");
 		System.out.println("3 - Sair do Jogo");
+	}
+
+	public static void segurancaSair() {
+		System.out.println("Tem certeza que deseja sair do jogo?\n");
+		System.out.println("1 - Sim");
+		System.out.println("2 - Voltar ao jogo");
+		try {
+			int opcao = Main.sc.nextInt();
+			switch (opcao) {
+
+			case 1:
+				System.out.println("Até logo!");
+				System.exit(0);
+				break;
+			case 2:
+				System.out.println("Bem-vindos novamente!\n");
+				if (Demonio.isSair()) { //  feito para reduzir o codigo
+					Demonio.invocaDemonio();
+				} else {
+					Main.main(null);
+				}
+
+				break;
+
+			default:
+				System.out.println("Só é permitido números entre 1-2 , try again");
+
+			}
+		} catch (InputMismatchException e) {
+			System.out.println("Só é permitido números inteiros,  try again");
+			Main.sc.nextLine();
+			segurancaSair();
+		}
+		System.exit(0);
 	}
 }

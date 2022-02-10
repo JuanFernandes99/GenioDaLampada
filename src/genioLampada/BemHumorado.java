@@ -5,7 +5,7 @@ public class BemHumorado extends Genio {
 
 	// Atributo(s)
 
-	protected Integer desejoDisponivelBemHumorado; // perguntar isto
+	private Integer desejoDisponivelBemHumorado;
 
 	 // Construtor(es)
 	public BemHumorado() {

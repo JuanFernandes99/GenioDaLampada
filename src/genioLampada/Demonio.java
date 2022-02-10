@@ -2,20 +2,21 @@ package genioLampada;
 
 import java.util.InputMismatchException;
 
-public class DemonioReciclavel extends Genio {
-	
-	static DemonioReciclavel demonio = new DemonioReciclavel();
-	
+public class Demonio extends Genio {
+
+	private static boolean isSair; //verificaçao de segurança para poupar linhas de codigo
+	static Demonio demonio = new Demonio();
+
 	// Atributo(s)
 	protected Integer desejoDisponivelDemonio;
 
-	 // Construtor(es)
-	public DemonioReciclavel() {
+	// Construtor(es)
+	public Demonio() {
 		desejoDisponivelDemonio = 0;
 	}
 
-	 // Método(s)
-	
+	// Método(s)
+
 	@Override
 	public void concedeDesejo(int maxDesejos) {
 
@@ -34,7 +35,7 @@ public class DemonioReciclavel extends Genio {
 	}
 
 	public static void invocaDemonio() {
-		System.out.println("OlÃ¡, eu sou demonio e lhe concederei todos os desejos que vocÃª me pedir\n");
+		System.out.println("Ola, eu sou demonio e lhe concederei todos os desejos que voce me pedir\n");
 
 		menuDemonio();
 
@@ -50,6 +51,8 @@ public class DemonioReciclavel extends Genio {
 				break;
 
 			case 3:
+				isSair = true;
+				Jogo.segurancaSair();
 				System.exit(0);
 				break;
 
@@ -68,8 +71,8 @@ public class DemonioReciclavel extends Genio {
 
 	public static void menuDemonio() {
 		System.out.println("1 - Pedir desejos");
-		System.out.println("2 - Recarregar a lÃ¢mpada");
-		System.out.println("3- Sair");
+		System.out.println("2 - Recarregar a lampada");
+		System.out.println("3- Sair do jogo");
 
 	}
 
@@ -81,10 +84,19 @@ public class DemonioReciclavel extends Genio {
 		}
 
 	}
+
+	// Getters e Setters
 	
-	  // Getters e Setters
 	public Integer getDesejoDisponivelDemonio() {
 		return desejoDisponivelDemonio;
+	}
+
+	public static boolean isSair() {
+		return isSair;
+	}
+
+	public static void setIsSair(boolean aIsSair) {
+		Demonio.isSair = aIsSair;
 	}
 
 	public void setDesejoDisponivelDemonio(Integer aDesejoDisponivelDemonio) {
