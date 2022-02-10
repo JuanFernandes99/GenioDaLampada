@@ -62,13 +62,14 @@ public class Lampada {
 	}
 	// Getters e Setters
 
-	public static Integer getNumgeniosDisponiveis() {
-		return numgeniosDisponiveis;
 
-	}
 
 	public int getMaxGenios() {
 		return maxGenios;
+	}
+
+	public static Integer getNumgeniosDisponiveis() {
+		return numgeniosDisponiveis;
 	}
 
 	public static Integer getEsfregadelas() {
