@@ -2,13 +2,11 @@ package genioLampada;
 
 public class GMalHumorado extends Genio {
 
-	
-	 // Construtor(es)
+	// Construtor(es)
 	public GMalHumorado() {
-
 	}
-	
-	 // Método(s)
+
+	// Método(s)
 	@Override
 	public void concedeDesejo(int maxDesejos) {
 		System.out.println("OlÃ¡, eu sou o gÃªnio mal-humorado e lhe concederei apenas o seu primeiro desejo.");

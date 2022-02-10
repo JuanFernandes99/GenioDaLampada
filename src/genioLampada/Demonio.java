@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 
 public class Demonio extends Genio {
 
-	private static boolean isSair; //verificaçao de segurança para poupar linhas de codigo
+	private static boolean isSair; // verificaçao de segurança para poupar linhas de codigo
 	static Demonio demonio = new Demonio();
 
 	// Atributo(s)
@@ -25,7 +25,7 @@ public class Demonio extends Genio {
 			desejoDisponivelDemonio = maxDesejos - aux;
 			System.out.println("\nDesejos disponiveis: " + (desejoDisponivelDemonio));
 			System.out.println("\nIndique o seu desejo");
-			String desejoIndicado = Main.sc.next();
+			String desejoIndicado = Main.sc.nextLine();
 			System.out.println("Desejo: " + desejoIndicado);
 			System.out.println("\nDesejo Cumprido! :)");
 			aux++;
@@ -62,7 +62,7 @@ public class Demonio extends Genio {
 			}
 
 		} catch (InputMismatchException e) {
-			Main.sc.nextLine();
+			Main.sc.next();
 			System.out.println("Só é permitido números inteiros,  try again");
 			invocaDemonio();
 		}
@@ -86,7 +86,7 @@ public class Demonio extends Genio {
 	}
 
 	// Getters e Setters
-	
+
 	public Integer getDesejoDisponivelDemonio() {
 		return desejoDisponivelDemonio;
 	}
@@ -96,7 +96,7 @@ public class Demonio extends Genio {
 	}
 
 	public static void setIsSair(boolean aIsSair) {
-		Demonio.isSair = aIsSair;
+		isSair = aIsSair;
 	}
 
 	public void setDesejoDisponivelDemonio(Integer aDesejoDisponivelDemonio) {
