@@ -35,7 +35,7 @@ public class Demonio extends Genio {
 	}
 
 	public static void invocaDemonio() {
-		System.out.println("Ola, eu sou demónio e irei conceder todos os desejos que voce me pedir.\n");
+		System.out.println("Ola, eu sou demónio e irei conceder todos os desejos que você me pedir.\n");
 
 		menuDemonio();
 

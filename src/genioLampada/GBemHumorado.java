@@ -11,7 +11,7 @@ public class GBemHumorado extends Genio {
 		desejoDisponivelBemHumorado = 0;
 	}
 
-	// Método(s)
+	// Funcão concedeDesejo 
 
 	@Override
 	public void concedeDesejo(long maxDesejos) {
