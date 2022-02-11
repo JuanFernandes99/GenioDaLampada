@@ -37,7 +37,7 @@ public class Lampada {
 
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
 		esfregadelas = Main.sc.nextInt();
-
+		Main.sc.nextLine();
 		esfregar(esfregadelas);
 
 		if (esfregadelas <= 0) {
@@ -55,7 +55,7 @@ public class Lampada {
 				GMalHumorado gMalHumorado = new GMalHumorado();
 				gMalHumorado.concedeDesejo(Genio.pedirDesejos());
 			}
-			esfregadelasAcumuladas = esfregadelas;
+			esfregadelasAcumuladas = getEsfregadelas();
 			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
 			setNumgeniosDisponiveis();
 		}

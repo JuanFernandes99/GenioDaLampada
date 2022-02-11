@@ -37,6 +37,7 @@ public class MenuJogo {
 		System.out.println("2 - Voltar ao jogo");
 		try {
 			int opcao = Main.sc.nextInt();
+			Main.sc.nextLine();
 			switch (opcao) {
 
 			case 1:

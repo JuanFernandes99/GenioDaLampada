@@ -25,7 +25,7 @@ public class Demonio extends Genio {
 			desejoDisponivelDemonio = maxDesejos - aux;
 			System.out.println("\nDesejos disponiveis: " + (desejoDisponivelDemonio));
 			System.out.println("\nIndique o seu desejo");
-			String desejoIndicado = Main.sc.next();
+			String desejoIndicado = Main.sc.nextLine();
 			System.out.println("Desejo: " + desejoIndicado);
 			System.out.println("\nDesejo Cumprido! :)");
 			aux++;

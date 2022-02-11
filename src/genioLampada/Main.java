@@ -17,6 +17,7 @@ public class Main {
 			MenuJogo.menu();
 			try {
 				int opcao = sc.nextInt();
+				sc.nextLine();
 				switch (opcao) {
 
 				case 1:
@@ -36,7 +37,7 @@ public class Main {
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("Só é permitido números inteiros,  try again");
-				sc.next();
+				sc.nextLine();
 			}
 		}
 	}

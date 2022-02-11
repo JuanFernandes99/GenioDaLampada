@@ -21,8 +21,7 @@ public class GBemHumorado extends Genio {
 			desejoDisponivelBemHumorado = maxDesejos - aux;
 			System.out.println("\nDesejos disponiveis: " + (desejoDisponivelBemHumorado));
 			System.out.println("\nIndique o seu desejo");
-			String desejoIndicado = Main.sc.next().replaceAll(" ", " "); // ver
-
+			String desejoIndicado = Main.sc.nextLine();
 			System.out.println("Desejo: " + desejoIndicado);
 			System.out.println("\nDesejo Cumprido! :)");
 			aux++;

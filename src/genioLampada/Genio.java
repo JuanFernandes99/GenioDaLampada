@@ -25,6 +25,7 @@ public abstract class Genio {
 		System.out.println("\nQuantos desejos pretende pedir?");
 
 		int desejos = Main.sc.nextInt();
+		Main.sc.nextLine();
 
 		if (desejos <= 0) {
 
