@@ -61,7 +61,7 @@ public class Demonio extends Genio {
 
 	public static void continuarDesejoDemonio() {
 		int aux = Genio.pedirDesejos();
-		demonio.concedeDesejo(aux);
+	demonio.concedeDesejo(aux);
 		while (!Lampada.isRecarregar()) {
 			invocaDemonio();
 		}
