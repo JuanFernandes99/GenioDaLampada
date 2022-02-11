@@ -12,7 +12,7 @@ public class Main {
 	static Lampada lampada = new Lampada(numAleatorio);
 
 	public static void main(String[] args) {
-		System.out.println("Bem-vindo ao jogo da Lampada Mágica!");
+		System.out.println("Bem-vindo ao jogo da Lâmpada Mágica!");
 		while (true) {
 			MenuJogo.menu();
 			try {
