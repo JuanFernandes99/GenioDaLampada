@@ -3,16 +3,14 @@ package genioLampada;
 public abstract class Genio {
 	
 	// Atributo(s)
-	protected static Integer desejosConcedidos;
-	protected static Integer maxDesejos;
+	protected static int desejosConcedidos = 0;
+	protected static int maxDesejos = 0;
 
 
-	public abstract void concedeDesejo(long maxDesejos);
+	public abstract void concedeDesejo(int maxDesejos);
 
 	 // Construtor(es)
 	public Genio() {
-		desejosConcedidos = 0;
-		maxDesejos = 0;
 	}
 
 	 // M�todo(s)
@@ -36,22 +34,4 @@ public abstract class Genio {
 
 		return desejos;
 	}
-
-	  // Getters e Setters
-	public Integer getDesejosConcedidos() {
-		return desejosConcedidos;
-	}
-
-	public static Integer getMaxDesejos() {
-		return maxDesejos;
-	}
-
-	public static void setMaxDesejos(Integer aMaxDesejos) {
-		Genio.maxDesejos = aMaxDesejos;
-	}
-
-	public void setDesejosConcedidos(Integer aDesejosConcedidos) {
-		Genio.desejosConcedidos = aDesejosConcedidos;
-	}
-
 }

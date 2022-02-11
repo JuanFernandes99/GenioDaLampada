@@ -4,37 +4,35 @@ import java.util.InputMismatchException;
 
 public class Demonio extends Genio {
 
-	private static boolean isSair; //verificaçao de segurança para poupar linhas de codigo
 	static Demonio demonio = new Demonio();
 
 	// Atributo(s)
-	protected long desejoDisponivelDemonio;
-
+	private int desejoDisponivelDemonio = 0;
+	private static boolean isSair; // verificaçao de segurança para poupar linhas de codigo
 	// Construtor(es)
+
 	public Demonio() {
-		desejoDisponivelDemonio = 0;
 	}
 
 	// Método(s)
 
 	@Override
-	public void concedeDesejo(long maxDesejos) {
+	public void concedeDesejo(int maxDesejos) {
 
-		int aux = 0;
-		while (aux < maxDesejos) {
-			desejoDisponivelDemonio = maxDesejos - aux;
+		int contadorDesejos = 0;
+		while (contadorDesejos < maxDesejos) {
+			desejoDisponivelDemonio = maxDesejos - contadorDesejos;
 			System.out.println("\nDesejos disponíveis: " + (desejoDisponivelDemonio));
 			System.out.println("\nIndique o seu desejo");
 			String desejoIndicado = Main.sc.nextLine();
-			System.out.println("Desejo: " + desejoIndicado);
-			System.out.println("\nDesejo Cumprido! :)");
-			aux++;
+			System.out.println("Desejo: (" + desejoIndicado + "), Realizado! :)");
+			contadorDesejos++;
 			Genio.AcresDesejos();
 			System.out.println("Desejos concedidos: " + desejosConcedidos);
 		}
 	}
 
-	public static void invocaDemonio() {
+	public static void invocaDemonio() { 
 		System.out.println("Ola, eu sou demónio e irei conceder todos os desejos que você me pedir.\n");
 
 		menuDemonio();
@@ -69,7 +67,7 @@ public class Demonio extends Genio {
 
 	}
 
-	public static void menuDemonio() {
+	public static void menuDemonio() { 
 		System.out.println("1 - Pedir desejos");
 		System.out.println("2 - Recarregar a lampada");
 		System.out.println("3 - Sair do jogo");
@@ -85,22 +83,10 @@ public class Demonio extends Genio {
 
 	}
 
-	// Getters e Setters
-	
-	public long getDesejoDisponivelDemonio() {											// retirar
-		return desejoDisponivelDemonio;	
-	}
+	// Getters
 
 	public static boolean isSair() {
 		return isSair;
-	}
-
-	public static void setIsSair(boolean aIsSair) {											// verificar se � possivel retirar
-		Demonio.isSair = aIsSair;
-	}
-
-	public void setDesejoDisponivelDemonio(Integer aDesejoDisponivelDemonio) {				// retirar
-		desejoDisponivelDemonio = aDesejoDisponivelDemonio;
 	}
 
 }

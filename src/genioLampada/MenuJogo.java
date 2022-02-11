@@ -29,6 +29,7 @@ public class MenuJogo {
 		System.out.println("1 - Instruções do jogo");
 		System.out.println("2 - Começar o jogo");
 		System.out.println("3 - Sair do jogo");
+		System.out.println("4 - Quantidade Esfregadelas");
 	}
 
 	public static void segurancaSair() {
