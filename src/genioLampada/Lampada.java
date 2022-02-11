@@ -4,28 +4,31 @@ public class Lampada {
 	// Atributo(s)
 	private static int maxGenios;
 	private static boolean isRecarregar;
-	private static Integer esfregadelas;
+	private static Integer esfregadelas;					// por int
 	private static Integer vezesRecarregada;
 	private static Integer numgeniosDisponiveis;
 	private static Integer esfregadelasAcumuladas;
 
 	// Construtor(es)
 	public Lampada(int aMaxGenios) {
+		
+		 System.out.println("A lampada foi criada com " + aMaxGenios + " génios"); 
+		
 		maxGenios = aMaxGenios;
 		numgeniosDisponiveis = aMaxGenios;
-		isRecarregar = false;
+		isRecarregar = false;							// inicializar quando a variavel foi criada (linhas 5 a 10)
 		esfregadelas = 0;
 		vezesRecarregada = 0;
 		esfregadelasAcumuladas = 0;
 	}
 
-	// Mï¿½todo(s)
+	// Mï¿½todo(s)										// comentar funcoes
 	public static void lampadaRecarregada() {
-		setIsRecarregar(true);
+		setIsRecarregar(true);							//isRecarregar = true;
 		esfregadelas = 0;
 		numgeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
-		System.out.println("Vezes recarregada: " + vezesRecarregada);
+		System.out.println("Vezes recarregada: " + vezesRecarregada);			// se tiver uma opcao no menu para ver quantas vezes foi recarregada, dá uma funcionalidade extra
 	}
 
 	public static void esfregarLampada() {

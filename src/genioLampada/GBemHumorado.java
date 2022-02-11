@@ -32,11 +32,11 @@ public class GBemHumorado extends Genio {
 	}
 
 	// Getters e Setters
-	public Integer getDesejoDisponivelBemHumorado() {
+	public Integer getDesejoDisponivelBemHumorado() {				// retirar
 		return desejoDisponivelBemHumorado;
 	}
 
-	public void setDesejoDisponivelBemHumorado(Integer aDesejoDisponivelBemHumorado) {
+	public void setDesejoDisponivelBemHumorado(Integer aDesejoDisponivelBemHumorado) {			// retirar
 		desejoDisponivelBemHumorado = aDesejoDisponivelBemHumorado;
 	}
 
