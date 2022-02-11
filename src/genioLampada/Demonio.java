@@ -8,7 +8,7 @@ public class Demonio extends Genio {
 	static Demonio demonio = new Demonio();
 
 	// Atributo(s)
-	protected int desejoDisponivelDemonio;
+	protected Integer desejoDisponivelDemonio;
 
 	// Construtor(es)
 	public Demonio() {
@@ -79,7 +79,7 @@ public class Demonio extends Genio {
 	public static void continuarDesejoDemonio() {
 		int aux = Genio.pedirDesejos();
 		demonio.concedeDesejo(aux);
-		while (Lampada.isRecarregar() == false) {
+		while (!Lampada.isRecarregar()) {
 			invocaDemonio();
 		}
 
@@ -87,19 +87,19 @@ public class Demonio extends Genio {
 
 	// Getters e Setters
 	
-	public Integer getDesejoDisponivelDemonio() {
-		return desejoDisponivelDemonio;
+	public Integer getDesejoDisponivelDemonio() {											// retirar
+		return desejoDisponivelDemonio;	
 	}
 
 	public static boolean isSair() {
 		return isSair;
 	}
 
-	public static void setIsSair(boolean aIsSair) {
+	public static void setIsSair(boolean aIsSair) {											// verificar se é possivel retirar
 		Demonio.isSair = aIsSair;
 	}
 
-	public void setDesejoDisponivelDemonio(Integer aDesejoDisponivelDemonio) {
+	public void setDesejoDisponivelDemonio(Integer aDesejoDisponivelDemonio) {				// retirar
 		desejoDisponivelDemonio = aDesejoDisponivelDemonio;
 	}
 
