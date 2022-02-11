@@ -34,7 +34,7 @@ public class Lampada {
 	}
 
 	public static void esfregarLampada() {
-
+//esfregadelasAcumuladas nao da certo
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
 		esfregadelas = Main.sc.nextInt();
 		Main.sc.nextLine();
