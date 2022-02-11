@@ -4,29 +4,17 @@ public class GBemHumorado extends Genio {
 
 	// Atributo(s)
 
-	private int desejoDisponivelBemHumorado = 0;
 
 	// Construtor(es)
 	public GBemHumorado() {
 	}
 
 	// Func√£o concedeDesejo 
-
-	@Override
-	public void concedeDesejo(int maxDesejos) { // FunÁao que se 
-		System.out.println("Ol√°, eu sou o genio bem-humorado e irei conceder todos os desejos que voce me pedir");
-		int contadorDesejos = 0; 
-		while (contadorDesejos < maxDesejos) {
-			desejoDisponivelBemHumorado = maxDesejos - contadorDesejos;
-			System.out.println("\nDesejos disponiveis: " + (desejoDisponivelBemHumorado));
-			System.out.println("\nIndique o seu desejo");
-			String desejoIndicado = Main.sc.nextLine();
-			System.out.println("Desejo: (" + desejoIndicado + "), Realizado! :)");
-			contadorDesejos++;
-			Genio.AcresDesejos();
-			System.out.println("Desejos concedidos: " + desejosConcedidos);
-		}
-		System.out.println("Esgotou os seus desejos :(");
+	public void concedeDesejo(int maxDesejos) {
+		System.out.println("Ola°, eu sou o genio bem-humorado e lhe concederei todos os desejos que voce me pedir");
+		super.concedeDesejo(maxDesejos);
 	}
+
+
 }
 

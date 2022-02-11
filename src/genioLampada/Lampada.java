@@ -18,6 +18,12 @@ public class Lampada {
 	}
 
 	// M�todo(s) // comentar funcoes
+
+	public static int DecresGenios() { // Acrescimos dos desejos.
+		numgeniosDisponiveis--;
+		return numgeniosDisponiveis;
+	}
+
 	public static void lampadaRecarregada() {
 		isRecarregar = true;
 		esfregadelas = 0;
@@ -26,7 +32,7 @@ public class Lampada {
 		System.out.println("Vezes recarregada: " + vezesRecarregada);
 	}
 
-	public static void esfregarLampada() { 
+	public static void esfregarLampada() {
 
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
 		esfregadelas = Main.sc.nextInt();
@@ -36,7 +42,7 @@ public class Lampada {
 			System.out.println("\nO número deve ser superior a zero.");
 			esfregarLampada();
 
-		} else if (esfregadelas != 0) {
+		} else {
 
 			if (esfregadelas % 2 == 0) {
 				GBemHumorado gBemHumorado = new GBemHumorado();
@@ -49,13 +55,13 @@ public class Lampada {
 			}
 
 		}
-		numgeniosDisponiveis--;
-		System.out.println("numgeniosDisponiveis: " + numgeniosDisponiveis--);
+		DecresGenios();
+		System.out.println("numgeniosDisponiveis: " + numgeniosDisponiveis);
 	}
-	
-	// Getters 
 
-	public static int getNumgeniosDisponiveis() { 
+	// Getters
+
+	public static int getNumgeniosDisponiveis() {
 		return numgeniosDisponiveis;
 	}
 
