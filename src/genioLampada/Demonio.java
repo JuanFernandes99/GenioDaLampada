@@ -8,7 +8,7 @@ public class Demonio extends Genio {
 	static Demonio demonio = new Demonio();
 
 	// Atributo(s)
-	protected Integer desejoDisponivelDemonio;
+	protected int desejoDisponivelDemonio;
 
 	// Construtor(es)
 	public Demonio() {

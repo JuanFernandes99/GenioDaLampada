@@ -34,12 +34,12 @@ public class Lampada {
 	}
 
 	public static void esfregarLampada() {
-//esfregadelasAcumuladas nao da certo
 		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
 		esfregadelas = Main.sc.nextInt();
 		Main.sc.nextLine();
-		esfregar(esfregadelas);
-
+		System.out.println("ver" + esfregadelas);
+		esfregar(esfregadelas); //esfregadelasAcumuladas nao da certo
+		//System.out.println("ver" + esfregadelas);
 		if (esfregadelas <= 0) {
 			System.out.println("\nO número deve ser superior a zero.");
 			esfregarLampada();
@@ -55,7 +55,7 @@ public class Lampada {
 				GMalHumorado gMalHumorado = new GMalHumorado();
 				gMalHumorado.concedeDesejo(Genio.pedirDesejos());
 			}
-			esfregadelasAcumuladas = getEsfregadelas();
+			 esfregadelasAcumuladas = getEsfregadelas();
 			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
 			setNumgeniosDisponiveis();
 		}
