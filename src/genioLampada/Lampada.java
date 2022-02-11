@@ -2,12 +2,12 @@ package genioLampada;
 
 public class Lampada {
 	// Atributo(s)
-	private static  int maxGenios;
-	private static  boolean isRecarregar;
-	private static  Integer esfregadelas;
-	private static  Integer vezesRecarregada;
-	private static  Integer numgeniosDisponiveis;
-	private static  Integer esfregadelasAcumuladas;
+	private static int maxGenios;
+	private static boolean isRecarregar;
+	private static Integer esfregadelas;
+	private static Integer vezesRecarregada;
+	private static Integer numgeniosDisponiveis;
+	private static Integer esfregadelasAcumuladas;
 
 	// Construtor(es)
 	public Lampada(int aMaxGenios) {
@@ -19,7 +19,7 @@ public class Lampada {
 		esfregadelasAcumuladas = 0;
 	}
 
-	// Método(s)
+	// Mï¿½todo(s)
 	public static void lampadaRecarregada() {
 		setIsRecarregar(true);
 		esfregadelas = 0;
@@ -28,20 +28,12 @@ public class Lampada {
 		System.out.println("Vezes recarregada: " + vezesRecarregada);
 	}
 
-	public static void esfregar(int aNovasEsfregadelas) {
-		esfregadelas = esfregadelas + aNovasEsfregadelas;
-
-	}
-
 	public static void esfregarLampada() {
-//esfregadelasAcumuladas nao da certo
-		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
+		System.out.println("Quantas vezes deseja esfregar a lï¿½mpada?");
 		esfregadelas = Main.sc.nextInt();
 		Main.sc.nextLine();
-		esfregar(esfregadelas);
-
 		if (esfregadelas <= 0) {
-			System.out.println("\nO número deve ser superior a zero.");
+			System.out.println("\nO nï¿½mero deve ser superior a zero.");
 			esfregarLampada();
 
 		} else if (esfregadelas != 0) {
@@ -55,10 +47,11 @@ public class Lampada {
 				GMalHumorado gMalHumorado = new GMalHumorado();
 				gMalHumorado.concedeDesejo(Genio.pedirDesejos());
 			}
-			esfregadelasAcumuladas = getEsfregadelas();
-			System.out.println("Esfregou a lâmpada: " + esfregadelasAcumuladas + " vezes");
-			setNumgeniosDisponiveis();
+
 		}
+
+		System.out.println("Esfregou a lï¿½mpada: " + getEsfregadelasAcumuladas() + " vezes");
+		setNumgeniosDisponiveis();
 	}
 	// Getters e Setters
 
@@ -80,6 +73,7 @@ public class Lampada {
 	}
 
 	public static Integer getEsfregadelasAcumuladas() {
+		esfregadelasAcumuladas = esfregadelasAcumuladas + esfregadelas;
 		return esfregadelasAcumuladas;
 	}
 
