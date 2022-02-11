@@ -8,7 +8,7 @@ public class Demonio extends Genio {
 	static Demonio demonio = new Demonio();
 
 	// Atributo(s)
-	protected Integer desejoDisponivelDemonio;
+	protected long desejoDisponivelDemonio;
 
 	// Construtor(es)
 	public Demonio() {
@@ -18,12 +18,12 @@ public class Demonio extends Genio {
 	// Método(s)
 
 	@Override
-	public void concedeDesejo(int maxDesejos) {
+	public void concedeDesejo(long maxDesejos) {
 
 		int aux = 0;
 		while (aux < maxDesejos) {
 			desejoDisponivelDemonio = maxDesejos - aux;
-			System.out.println("\nDesejos disponiveis: " + (desejoDisponivelDemonio));
+			System.out.println("\nDesejos disponíveis: " + (desejoDisponivelDemonio));
 			System.out.println("\nIndique o seu desejo");
 			String desejoIndicado = Main.sc.nextLine();
 			System.out.println("Desejo: " + desejoIndicado);
@@ -35,7 +35,7 @@ public class Demonio extends Genio {
 	}
 
 	public static void invocaDemonio() {
-		System.out.println("Ola, eu sou demonio e lhe concederei todos os desejos que voce me pedir\n");
+		System.out.println("Ola, eu sou demónio e irei conceder todos os desejos que voce me pedir.\n");
 
 		menuDemonio();
 
@@ -57,13 +57,13 @@ public class Demonio extends Genio {
 				break;
 
 			default:
-				System.out.println("Só é permitido números entre 1-3 , try again");
+				System.out.println("Só são permitidos números entre 1 a 3 , tente novo.");
 				invocaDemonio();
 			}
 
 		} catch (InputMismatchException e) {
 			Main.sc.nextLine();
-			System.out.println("Só é permitido números inteiros,  try again");
+			System.out.println("Só são permitidos números inteiros, tente novo.");
 			invocaDemonio();
 		}
 
@@ -72,7 +72,7 @@ public class Demonio extends Genio {
 	public static void menuDemonio() {
 		System.out.println("1 - Pedir desejos");
 		System.out.println("2 - Recarregar a lampada");
-		System.out.println("3- Sair do jogo");
+		System.out.println("3 - Sair do jogo");
 
 	}
 
@@ -87,7 +87,7 @@ public class Demonio extends Genio {
 
 	// Getters e Setters
 	
-	public Integer getDesejoDisponivelDemonio() {											// retirar
+	public long getDesejoDisponivelDemonio() {											// retirar
 		return desejoDisponivelDemonio;	
 	}
 
@@ -95,7 +95,7 @@ public class Demonio extends Genio {
 		return isSair;
 	}
 
-	public static void setIsSair(boolean aIsSair) {											// verificar se � possivel retirar
+	public static void setIsSair(boolean aIsSair) {											// verificar se � possivel retirar
 		Demonio.isSair = aIsSair;
 	}
 

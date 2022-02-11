@@ -12,7 +12,7 @@ public class Lampada {
 	// Construtor(es)
 	public Lampada(int aMaxGenios) {
 		
-		 System.out.println("A lampada foi criada com " + aMaxGenios + " g�nios"); 
+		 System.out.println("A lâmpada foi criada com " + aMaxGenios + " génio(s)"); 
 		
 		maxGenios = aMaxGenios;
 		numgeniosDisponiveis = aMaxGenios;
@@ -28,15 +28,15 @@ public class Lampada {
 		esfregadelas = 0;
 		numgeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
-		System.out.println("Vezes recarregada: " + vezesRecarregada);			// se tiver uma opcao no menu para ver quantas vezes foi recarregada, d� uma funcionalidade extra
+		System.out.println("Vezes recarregada: " + vezesRecarregada);			// se tiver uma opcao no menu para ver quantas vezes foi recarregada, d� uma funcionalidade extra
 	}
 
 	public static void esfregarLampada() {
-		System.out.println("Quantas vezes deseja esfregar a l�mpada?");
+		System.out.println("Quantas vezes deseja esfregar a lâmpada?");
 		esfregadelas = Main.sc.nextInt();
 		Main.sc.nextLine();
 		if (esfregadelas <= 0) {
-			System.out.println("\nO n�mero deve ser superior a zero.");
+			System.out.println("\nO número deve ser superior a zero.");
 			esfregarLampada();
 
 		} else if (esfregadelas != 0) {
@@ -53,7 +53,7 @@ public class Lampada {
 
 		}
 
-		System.out.println("Esfregou a l�mpada: " + getEsfregadelasAcumuladas() + " vezes");
+		System.out.println("Esfregou a lâmpada: " + getEsfregadelasAcumuladas() + " vezes");
 		setNumgeniosDisponiveis();
 	}
 	// Getters e Setters

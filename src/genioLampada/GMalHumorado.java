@@ -10,8 +10,8 @@ public class GMalHumorado extends Genio {
 	
 	 // Método(s)
 	@Override
-	public void concedeDesejo(int maxDesejos) {
-		System.out.println("OlÃ¡, eu sou o gÃªnio mal-humorado e lhe concederei apenas o seu primeiro desejo.");
+	public void concedeDesejo(long maxDesejos) {
+		System.out.println("Olá! Eu sou o génio mal-humorado e irei conceder apenas seu primeiro desejo.");
 		System.out.println("\nIndique o seu desejo");
 		String desejoIndicado = Main.sc.nextLine();
 		System.out.println("Desejo: " + desejoIndicado);

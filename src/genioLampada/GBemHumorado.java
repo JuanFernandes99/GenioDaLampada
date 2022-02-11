@@ -4,7 +4,7 @@ public class GBemHumorado extends Genio {
 
 	// Atributo(s)
 
-	private Integer desejoDisponivelBemHumorado;
+	private long desejoDisponivelBemHumorado;
 
 	// Construtor(es)
 	public GBemHumorado() {
@@ -14,8 +14,8 @@ public class GBemHumorado extends Genio {
 	// Método(s)
 
 	@Override
-	public void concedeDesejo(int maxDesejos) {
-		System.out.println("Ola¡, eu sou o genio bem-humorado e lhe concederei todos os desejos que voce me pedir");
+	public void concedeDesejo(long maxDesejos) {
+		System.out.println("Olá, eu sou o genio bem-humorado e irei conceder todos os desejos que voce me pedir");
 		int aux = 0;
 		while (aux < maxDesejos) {
 			desejoDisponivelBemHumorado = maxDesejos - aux;
@@ -32,7 +32,7 @@ public class GBemHumorado extends Genio {
 	}
 
 	// Getters e Setters
-	public Integer getDesejoDisponivelBemHumorado() {				// retirar
+	public long getDesejoDisponivelBemHumorado() {				// retirar
 		return desejoDisponivelBemHumorado;
 	}
 

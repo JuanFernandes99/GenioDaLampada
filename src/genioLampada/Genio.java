@@ -7,7 +7,7 @@ public abstract class Genio {
 	protected static Integer maxDesejos;
 
 
-	public abstract void concedeDesejo(int maxDesejos);
+	public abstract void concedeDesejo(long maxDesejos);
 
 	 // Construtor(es)
 	public Genio() {
@@ -15,7 +15,7 @@ public abstract class Genio {
 		maxDesejos = 0;
 	}
 
-	 // Método(s)
+	 // Mï¿½todo(s)
 	public static void AcresDesejos() { // Acrescimos dos desejos.
 		desejosConcedidos++;
 	}
@@ -29,7 +29,7 @@ public abstract class Genio {
 
 		if (desejos <= 0) {
 
-			System.out.println("O número de desejos deve ser superior a 0 ");
+			System.out.println("O nÃºmero de desejos deve ser superior a 0 ");
 			pedirDesejos();
 
 		}
