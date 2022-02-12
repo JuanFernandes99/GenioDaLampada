@@ -21,7 +21,7 @@ public class Lampada {
 	// Métodos
 
 	// Subtrai o número de génios disponíveis e retorna esse valor.
-	public static int DecresGenios() { // Acrescimos dos desejos.
+	public static int DecresGenios() {
 		numgeniosDisponiveis--;
 		return numgeniosDisponiveis;
 	}
@@ -33,7 +33,7 @@ public class Lampada {
 		numgeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
 	}
-	
+
 	// Indica o tipo de génio que sairá da lâmpada (entre o bem e o mal-humorado) e
 	// indica quantos ainda estão disponíveis
 	public static void esfregarLampada() {
@@ -51,7 +51,7 @@ public class Lampada {
 				GBemHumorado gBemHumorado = new GBemHumorado(); // Criação do Objeto chamado gBemHumorado
 				gBemHumorado.concedeDesejo(Genio.pedirDesejos());
 
-			} else {  // Se não for cumprida a condição, invoca ao génio mal-humorado.
+			} else { // Se não for cumprida a condição, invoca ao génio mal-humorado.
 
 				GMalHumorado gMalHumorado = new GMalHumorado(); // Criação do Objeto chamado gMalHumorado
 				gMalHumorado.concedeDesejo(Genio.pedirDesejos());
