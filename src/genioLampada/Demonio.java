@@ -55,7 +55,8 @@ public class Demonio extends Genio {
 
 		} catch (InputMismatchException e) {
 			Main.sc.nextLine(); // Para limpar o Scanner
-			System.out.println("Só são permitidos números inteiros, tente de novo.");
+			System.out.println(
+					"Erro no input: Só são permitidos números inteiros entre -2147483648 até 2147483647, tente de novo.");
 			invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da função
 		}
 

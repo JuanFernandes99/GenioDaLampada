@@ -53,7 +53,8 @@ public class Main {
 					System.out.println("Só são permitidos números entre 1 a 5 , tente de novo.");
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("Só são permitido números inteiros, tente de novo.");
+				System.out.println(
+						"Erro no input: Só são permitidos números inteiros entre -2147483648 até 2147483647, tente de novo.");
 				sc.nextLine(); // Limpar consola
 			}
 		}

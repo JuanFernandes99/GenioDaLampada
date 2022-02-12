@@ -28,7 +28,7 @@ public abstract class Genio {
 					System.out.print("MUAHAHAHAHAHAHAH ");
 					Demonio.getRandomWord();
 				} else {
-					System.out.println("Desejo: " + desejoIndicado + " Desejos disponiveis: " + (desejoDisponivel - 1));
+					System.out.println("Desejo: " + desejoIndicado + " ,Desejos disponiveis: " + (desejoDisponivel - 1));
 
 				}
 				acresDesejos();
