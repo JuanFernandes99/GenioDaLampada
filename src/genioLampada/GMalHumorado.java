@@ -2,7 +2,7 @@ package genioLampada;
 
 public class GMalHumorado extends Genio {
 
-	// Construtor(es)
+	// Construtor
 	public GMalHumorado() {
 	}
 

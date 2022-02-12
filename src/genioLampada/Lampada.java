@@ -2,8 +2,7 @@ package genioLampada;
 
 public class Lampada {
 
-	// Atributo(s)
-
+	// Atributos
 	private static boolean isRecarregar = false;
 	private static int maxGenios;
 	private static int esfregadelas = 0;
@@ -13,7 +12,6 @@ public class Lampada {
 
 	// Construtor
 	public Lampada(int aMaxGenios) {
-		System.out.println("A lâmpada foi criada com " + aMaxGenios + " génios(s)");
 		maxGenios = aMaxGenios;
 		numGeniosDisponiveis = aMaxGenios;
 	}
@@ -32,6 +30,8 @@ public class Lampada {
 		isRecarregar = true;
 		numGeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
+		esfregadelasAcumuladas = 0;
+		Genio.desejosConcedidos = 0;
 	}
 
 	// Indica o tipo de génio que sairá da lâmpada (entre o bem e o mal-humorado) e
@@ -43,7 +43,7 @@ public class Lampada {
 		esfregadelasAcumuladas += esfregadelas;
 		if (esfregadelas <= 0) {
 			System.out.println("\nO número deve ser superior a zero.");
-			esfregarLampada(); // Método recursivo que chama a si mesma para voltar ao início da função
+			esfregarLampada(); // Método recursivo que chama a si mesma para voltar ao início da mesma
 
 		} else {
 
@@ -64,7 +64,7 @@ public class Lampada {
 
 	// Getters
 
-	public static int getNumgeniosDisponiveis() {
+	public static int getNumGeniosDisponiveis() {
 		return numGeniosDisponiveis;
 	}
 
@@ -78,5 +78,9 @@ public class Lampada {
 
 	public static int getVezesRecarregada() {
 		return vezesRecarregada;
+	}
+
+	public static int getMaxGenios() {
+		return maxGenios;
 	}
 }

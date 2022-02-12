@@ -13,8 +13,9 @@ public class MenuJogo {
 				+ "\n" + "Passos:\n" + "\n" + "1. O jogador tem de esfregar a lâmpada para iniciar o jogo;\n"
 				+ "2. O jogador decide quantas vezes quer esfregar a lâmpada;\n"
 				+ "3. O jogador pede quantos desejos quer realizados;\n" + "4. BOOOM!!! Sai o génio;\n"
-				+ "\nA sequência será repetida, pelo jogador, desde a opção 2 à opção 4.\n" + "Atenção!!!\n");
-		
+				+ "\nA sequência será repetida, pelo jogador, desde a opção 2 à opção 4.\n"
+				+ "Atenção!!! o jogador pode sair do jogo a qualquer momento.\n");
+
 	}
 	// Indica o tipo de génio que sairá da lâmpada (génio (que será bem ou
 	// mal-humorado) ou demónio)
@@ -22,7 +23,7 @@ public class MenuJogo {
 	public static void jogar() {
 
 		// Se ainda tem génios disponíveis, podemos continuar a esfregar a lâmpada
-		if (Lampada.getNumgeniosDisponiveis() > 0) {
+		if (Lampada.getNumGeniosDisponiveis() > 0) {
 			Lampada.esfregarLampada();
 		} else { // Se não temos génios disponíveis invoca o demónio
 			Demonio.invocaDemonio();
@@ -31,11 +32,11 @@ public class MenuJogo {
 
 	// Apresenta ao utilizador um menu principal com as opções de jogo possíveis,
 	// enquanto houverem génios disponíveis
-	
+
 	public static void menu() {
 		System.out.println("\nEscolha uma das opções disponíveis:");
 		System.out.println("1 - Instruções do jogo");
-		System.out.println("2 - Começar o jogo");
+		System.out.println("2 - Jogar");
 		System.out.println("3 - Sair do jogo");
 		System.out.println("4 - Quantidade de Esfregadelas");
 		System.out.println("5 - Quantidade de Recarregamentos");
@@ -45,7 +46,7 @@ public class MenuJogo {
 	// carregado na opção do menu principal de "Sair do jogo", usando um try catch
 	// com o propósito do tratamento das exceções, produzidas no momento em que o
 	// utilizador introduze inputs diferentes dos que são esperados
-	
+
 	public static void segurancaSair() {
 		System.out.println("Tem certeza que deseja sair do jogo?\n");
 		System.out.println("1 - Sim");
@@ -64,19 +65,19 @@ public class MenuJogo {
 				if (Demonio.isSair()) {
 					Demonio.invocaDemonio();
 				} else {
-					Main.main(null);
+					jogar();
 				}
 
 				break;
 
 			default:
-				System.out.println("Só são permitidos números entre 1 a 2, tente de novo.");
+				System.out.println("Só são permitidos números entre 1 e 2, tente de novo.");
 
 			}
 		} catch (InputMismatchException e) {
 			System.out.println("Só são permitidos números inteiros, tente novo.");
 			Main.sc.nextLine(); // Limpar consola
-			segurancaSair(); // Método recursivo que chama a si mesma para voltar ao início da função
+			segurancaSair(); // Método recursivo que chama a si mesma para voltar ao início da mesma
 		}
 		System.exit(0);
 	}

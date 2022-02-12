@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Main {
 	static Scanner sc = new Scanner(System.in);
-	static int numAleatorio = (int) (Math.random() * 3) + 1; // Limita o número aleatório entre 1 e 2 , para escolher o
+	static int numAleatorio = (int) (Math.random() * 3) + 1; // Limita o número aleatório entre 1 e 3 , para escolher o
 																// nº máximo de génios
 	static Lampada lampada = new Lampada(numAleatorio); // Criação do Objeto chamado Lampada
 
@@ -23,6 +23,7 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lâmpada Mágica!");
 		System.out.println("Criado por: \nJuan Fernandes\nJessica Barros\nSara Teixeira\nElsa Gomes");
+		System.out.println("\nA lâmpada foi criada com " + Lampada.getMaxGenios() + " génios(s)");
 		while (true) {
 			MenuJogo.menu();
 			try {

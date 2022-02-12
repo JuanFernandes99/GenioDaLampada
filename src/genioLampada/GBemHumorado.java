@@ -1,14 +1,10 @@
 package genioLampada;
 
 public class GBemHumorado extends Genio {
-
-	// Atributo(s)
-
-	// Construtor(es)
+	
+	// Construtor
 	public GBemHumorado() {
 	}
-
-	// Métodos
 
 	// Método que herdou da classe Génio
 	public void concedeDesejo(int maxDesejos) {

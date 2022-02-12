@@ -5,10 +5,11 @@ import java.util.InputMismatchException;
 public class Demonio extends Genio {
 
 	static Demonio demonio = new Demonio(); // Criação do Objeto chamado demónio
-	// Atributo
+	// Atributos
 	private static boolean isSair; // atributo criado com o fim de utilizar o método “menuSegurançaSair ()” não só
 									// para o menu principal como também para o menu do demónio
-	private static boolean isActive;
+	private static boolean isActive; // atributo criado com o fim de verificar se o demónio está a ser utilizado.
+
 	// Construtor
 
 	public Demonio() {
@@ -49,15 +50,15 @@ public class Demonio extends Genio {
 				break;
 
 			default:
-				System.out.println("Só são permitidos números entre 1 a 3 , tente de novo.");
-				invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da função
+				System.out.println("Só são permitidos números entre 1 e 3 , tente de novo.");
+				invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da mesma
 			}
 
 		} catch (InputMismatchException e) {
 			Main.sc.nextLine(); // Para limpar o Scanner
 			System.out.println(
 					"Erro no input: Só são permitidos números inteiros entre -2147483648 até 2147483647, tente de novo.");
-			invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da função
+			invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da mesma
 		}
 
 	}
@@ -95,7 +96,7 @@ public class Demonio extends Genio {
 				"Você já dançou com o diabo ao luar?",
 				"A verdadeira piada é sua profunda convicção de que de alguma forma, em algum lugar, tudo isso faz sentido.",
 				"Paramos de procurar monstros debaixo da nossa cama, quando percebemos que eles estavam dentro de nós." };
-		int numAleatorio = (int) (Math.random() * randomWords.length) + 1;
+		int numAleatorio = (int) (Math.random() * (randomWords.length - 1)) + 1;
 		System.out.println(randomWords[numAleatorio]);
 
 	}
