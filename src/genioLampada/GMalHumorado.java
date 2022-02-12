@@ -7,6 +7,7 @@ public class GMalHumorado extends Genio {
 	}
 
 	// Método(s)
+	//Concede desejos com maximo de desejos (atributo), guarda o desejo pedido.
 	@Override
 	public void concedeDesejo(int maxDesejos) {
 		System.out.println("Olá! Eu sou o génio mal-humorado e irei conceder apenas seu primeiro desejo.");

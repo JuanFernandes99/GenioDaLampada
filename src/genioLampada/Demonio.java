@@ -8,7 +8,7 @@ public class Demonio extends Genio {
 
 	// Atributo(s)
 	private static boolean isSair; // verificaÃ§ao de seguranÃ§a para poupar linhas de codigo
-	
+
 	// Construtor(es)
 
 	public Demonio() {
@@ -16,8 +16,10 @@ public class Demonio extends Genio {
 
 	// MÃ©todo(s)
 
-
-	public static void invocaDemonio() { 
+	// Função das opções que o Demíno oferece, continuar a conceder desejos,
+	// recarrega ou permite sair do jogo,usando excepções para evitar inputs
+	// diferentes dos que são pedidos.
+	public static void invocaDemonio() {
 		System.out.println("Ola, eu sou demÃ³nio e irei conceder todos os desejos que vocÃª me pedir.\n");
 
 		menuDemonio();
@@ -52,16 +54,18 @@ public class Demonio extends Genio {
 
 	}
 
-	public static void menuDemonio() { 
+	// Opções em que utilizador pode escolher.
+	public static void menuDemonio() {
 		System.out.println("1 - Pedir desejos");
 		System.out.println("2 - Recarregar a lampada");
 		System.out.println("3 - Sair do jogo");
 
 	}
 
+	// Função de continuar a pedir desejos ao demónio.
 	public static void continuarDesejoDemonio() {
 		int aux = Genio.pedirDesejos();
-	demonio.concedeDesejo(aux);
+		demonio.concedeDesejo(aux);
 		while (!Lampada.isRecarregar()) {
 			invocaDemonio();
 		}
