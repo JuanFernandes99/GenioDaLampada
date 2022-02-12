@@ -21,10 +21,13 @@ public abstract class Genio {
 			desejoDisponivel = aMaxDesejos - aux;
 			System.out.println("\nIndique o seu desejo");
 			String desejoIndicado = Main.sc.nextLine();
-			AcresDesejos();
-			aux++;
-			System.out.println("Desejo: " + desejoIndicado);
-
+			if (Demonio.isActive()) {
+				Demonio.getRandomWord();
+			} else {
+				System.out.println("Desejo: " + desejoIndicado + " Desejos disponiveis: " + (desejoDisponivel - 1));
+				AcresDesejos();
+				aux++;
+			}
 
 		}
 	}

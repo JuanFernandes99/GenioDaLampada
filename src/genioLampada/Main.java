@@ -7,7 +7,7 @@ public class Main {
 	static Scanner sc = new Scanner(System.in);
 	static int numAleatorio = (int) (Math.random() * 3) + 1; // Limita o número aleatório entre 1 e 2 , para escolher o
 																// nº máximo de génios
-	static Lampada lampada = new Lampada(1); // Criação do Objeto chamado Lampada
+	static Lampada lampada = new Lampada(0); // Criação do Objeto chamado Lampada
 
 	// Método principal - inicia a execução do aplicativo Java, e mostra as opções
 	// principais do Jogo, usando um try catch
@@ -39,7 +39,7 @@ public class Main {
 					break;
 					
 				case 5 :
-					System.out.println("Vezes recarregadas: " + Lampada.getVezesRecarregada());
+					System.out.println("Vezes recarregada: " + Lampada.getVezesRecarregada());
 					break;
 					
 

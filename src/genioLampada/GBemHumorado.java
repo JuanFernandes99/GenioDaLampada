@@ -14,9 +14,8 @@ public class GBemHumorado extends Genio {
 	public void concedeDesejo(int maxDesejos) {
 		System.out.println("----BOOOOOOM, prazer eu sou o Aladin e vou concretizar os teus desejos----");
 		super.concedeDesejo(maxDesejos);
-		System.out.println("Cumprido! :) , Desejos concedidos: " + desejosConcedidos + ", Desejos disponiveis: "
-				+ (desejoDisponivel - 1));
-		System.out.print("Esgotou os seus desejos :( , "); // arreglar
+		System.out.println("Desejos concedidos: " + desejosConcedidos + ", HUHU!!! Todos os desejos foram realizados ");
+		System.out.print("Esgotou os seus desejos :( , ");
 	}
 
 }
