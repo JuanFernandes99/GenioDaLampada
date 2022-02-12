@@ -7,8 +7,8 @@ public abstract class Genio {
 	protected static int maxDesejos = 0;
 	protected static int desejoDisponivel = 0;
 
-	// Concede desejos, permitindo ao código ser executado repetitivamente baseado
-	// na condição da auxiliar ser menor comparativamente ao máximo de desejos
+	// Concede desejos, permitindo ao cï¿½digo ser executado repetitivamente baseado
+	// na condiï¿½ï¿½o da auxiliar ser menor comparativamente ao mï¿½ximo de desejos
 	// (atributo) e faz a contagem dos desejos pedidos.
 
 	public void concedeDesejo(int aMaxDesejos) {
@@ -39,7 +39,7 @@ public abstract class Genio {
 		desejosConcedidos++;
 	}
 
-	// Pede o nº de desejos ao utilizador e guarda-os, condicionando-os nº num
+	// Pede o nï¿½ de desejos ao utilizador e guarda-os, condicionando-os nï¿½ num
 	// intervalo.
 	public static int pedirDesejos() {
 
@@ -50,7 +50,7 @@ public abstract class Genio {
 
 		if (desejos <= 0 || desejos > 10) {
 
-			System.out.println("O nÃºmero de desejos deve ser superior a 0 e inferior a 10 ");
+			System.out.println("O nÃºmero de desejos deve ser superior a 0 e inferior a 10, inclusive. ");
 			pedirDesejos();
 
 		}
