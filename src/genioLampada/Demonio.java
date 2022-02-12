@@ -8,7 +8,7 @@ public class Demonio extends Genio {
 	// Atributo
 	private static boolean isSair; // Atributo criado com o fim de utilizar o método “menuSegurançaSair ()” não só
 									// para o menu principal como também para o menu do demónio
-	
+
 	private static boolean isActive;// Atributo criado com o fim de verificar se o demónio esta a ser utilizado.
 
 	public Demonio() {
@@ -79,7 +79,8 @@ public class Demonio extends Genio {
 			invocaDemonio();
 		}
 	}
-
+	
+	// Método que cria frases aleatórias como resposta do demónio aos desejos.
 	public static void getRandomWord() {
 		String[] randomWords = { "Não teste o monstro em mim!", "Uma piada por dia distancia a tristeza.",
 				"Sou só eu ou isto está a ficar cada vez mais maluco aqui?",
@@ -96,7 +97,6 @@ public class Demonio extends Genio {
 				"Paramos de procurar monstros debaixo da nossa cama, quando percebemos que eles estavam dentro de nós." };
 		int numAleatorio = (int) (Math.random() * randomWords.length) + 1;
 		System.out.println(randomWords[numAleatorio]);
-
 	}
 
 	// Getter
