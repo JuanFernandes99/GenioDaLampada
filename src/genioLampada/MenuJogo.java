@@ -14,6 +14,7 @@ public class MenuJogo {
 				+ "2. O jogador decide quantas vezes quer esfregar a lâmpada;\n"
 				+ "3. O jogador pede quantos desejos quer realizados;\n" + "4. BOOOM!!! Sai o génio;\n"
 				+ "\nA sequência será repetida, pelo jogador, desde a opção 2 à opção 4.\n" + "Atenção!!!\n");
+		
 	}
 	// Indica o tipo de génio que sairá da lâmpada (génio (que será bem ou
 	// mal-humorado) ou demónio)

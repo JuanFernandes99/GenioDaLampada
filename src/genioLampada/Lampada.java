@@ -21,7 +21,7 @@ public class Lampada {
 	// Métodos
 
 	// Subtrai o número de génios disponíveis e retorna esse valor.
-	public static int DecresGenios() {
+	public static int decresGenios() {
 		numGeniosDisponiveis--;
 		return numGeniosDisponiveis;
 	}
@@ -58,7 +58,7 @@ public class Lampada {
 			}
 
 		}
-		DecresGenios();
+		decresGenios();
 		System.out.println("número de génios Disponiveis: " + numGeniosDisponiveis);
 	}
 

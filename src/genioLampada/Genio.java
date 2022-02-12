@@ -18,14 +18,14 @@ public abstract class Genio {
 	public void concedeDesejo(int aMaxDesejos) {
 		int aux = 0;
 		while (aux < aMaxDesejos) {
-
 			desejoDisponivel = aMaxDesejos - aux;
 			System.out.println("\nIndique o seu desejo");
 			String desejoIndicado = Main.sc.nextLine();
 			AcresDesejos();
 			aux++;
-			System.out.println("Desejo: " + desejoIndicado + " Cumprido! :) , Desejos concedidos: " + desejosConcedidos
-					+ ", Desejos disponiveis: " + (desejoDisponivel - 1));
+			System.out.println("Desejo: " + desejoIndicado);
+
+
 		}
 	}
 

@@ -17,14 +17,18 @@ public class Demonio extends Genio {
 
 	// Métodos
 
+
+	public void concedeDesejo(int maxDesejos) {
+		super.concedeDesejo(maxDesejos);
+
+	}
 	// Método que mostra as opções que o Demónio oferece, continuar a conceder
 	// desejos, recarregar a Lâmpada ou permite sair do jogo, usando um try catch
 	// com o propósito do tratamento das exceções, produzidas no momento em que o
 	// utilizador introduze inputs diferentes dos que são esperados.
-
 	public static void invocaDemonio() {
-		System.out.println("Olá, eu sou demónio e irei conceder todos os desejos que você me pedir.\n");
-
+		System.out.println("Well well well! Quem é que temos aqui?! Sou o Joker, queres tentar a tua sorte?? ");
+		//getRandomWord();
 		menuDemonio();
 
 		try {
@@ -74,11 +78,17 @@ public class Demonio extends Genio {
 			invocaDemonio();
 		}
 	}
+	public static void getRandomWord() {
+		int numAleatorio = (int) (Math.random() * 3) + 1;
+		String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+		System.out.println(cars[numAleatorio]);
+	}
 
 	// Getter
 
 	public static boolean isSair() {
 		return isSair;
 	}
+	
 
 }
