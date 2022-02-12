@@ -8,12 +8,22 @@ public class MenuJogo {
 	// funciona o jogo
 	public static void instrucoes() {
 
+<<<<<<< HEAD
 		System.out.println(" Instruções\n" + "\n"
 				+ "Este jogo realiza-se dentro de uma Lâmpada Mágica que contém um número indeterminados de génios. \nO objetivo é iniciar a lâmpada, chamar génios e pedir desejos que determinam se irá sair um génio bem ou mal-humorado.\nTenta a tua sorte e vê o que acontece no final!\n"
 				+ "\n" + "Passos:\n" + "\n" + "1. O jogador tem de esfregar a lâmpada para iniciar o jogo;\n"
 				+ "2. O jogador decide quantas vezes quer esfregar a lâmpada;\n"
 				+ "3. O jogador pede quantos desejos quer realizados;\n" + "4. BOOOM!!! Sai o génio;\n"
 				+ "\nA sequência será repetida, pelo jogador, desde a opção 2 à opção 4.\n" + "Atenção!!!\n");
+=======
+		System.out.println(" InstruÃ§Ãµes\n" + "\n"
+				+ "Este jogo realiza-se dentro de uma LÃ¢mpada MÃ¡gica que contÃ©m um nÃºmero indeterminado de gÃ©nios. \nO objetivo Ã© iniciar a lÃ¢mpada, chamar gÃ©nios e pedir desejos que determinam se irÃ¡ sair um gÃ©nio bem ou mal-humorado.\nTenta a tua sorte e vÃª o que acontece no final!\n"
+				+ "\n" + "Passos:\n" + "\n" + "1. O jogador tem de esfregar a lÃ¢mpada para iniciar o jogo;\n"
+				+ "2. O jogador decide quantas vezes quer esfregar a lÃ¢mpada;\n"
+				+ "3. O jogador pede quantos desejos quer realizados;\n" + "4. BOOOM!!! Sai o gÃ©nio;\n"
+				+ "\nA sequÃªncia serÃ¡ repetida, pelo jogador, desde a opÃ§Ã£o 2 Ã  opÃ§Ã£o 4.\n" + "AtenÃ§Ã£o!!!\n"
+				+ "\nO jogador decide quando acaba o jogo a qualquer momento, atravÃ©s da opÃ§Ã£o disponÃ­vel 'sair do jogo';");
+>>>>>>> 470cb1096748254cbe6dc9f7153cafd361707119
 	}
 	// Indica o tipo de génio que sairá da lâmpada (génio (que será bem ou
 	// mal-humorado) ou demónio)
