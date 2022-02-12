@@ -23,8 +23,7 @@ public abstract class Genio {
 			System.out.println("\nDesejos disponiveis: " + desejoDisponivel);
 			System.out.println("\nIndique o seu desejo");
 			String desejoIndicado = Main.sc.nextLine();
-			System.out.println("Desejo: " + desejoIndicado);
-			System.out.println("\nDesejo Cumprido! :)");
+			System.out.println("Desejo: " + desejoIndicado + " Cumprido! :)");
 			AcresDesejos();
 			System.out.println("Desejos concedidos: " + desejosConcedidos);
 		}
