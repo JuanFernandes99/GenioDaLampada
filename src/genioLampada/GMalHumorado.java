@@ -6,13 +6,11 @@ public class GMalHumorado extends Genio {
 	public GMalHumorado() {
 	}
 
-	// MÈtodo
-
-	// Concede apenas o primeiro desejo que lhe for colocado,independentemente da
-	// quantidade de desejos (maxDesejos) que o utilizador pretende pedir.
+	// M√©todo(s)
+	//Concede desejos com maximo de desejos (atributo), guarda o desejo pedido.
 	@Override
 	public void concedeDesejo(int maxDesejos) {
-		System.out.println("Ol·! Eu sou o gÈnio mal-humorado e irei conceder apenas seu primeiro desejo.");
+		System.out.println("Ol√°! Eu sou o g√©nio mal-humorado e irei conceder apenas seu primeiro desejo.");
 		System.out.println("\nIndique o seu desejo");
 		String desejoIndicado = Main.sc.nextLine();
 		System.out.println("Desejo: (" + desejoIndicado + "), Realizado! :)");

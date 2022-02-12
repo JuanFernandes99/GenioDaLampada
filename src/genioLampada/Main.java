@@ -3,16 +3,14 @@ package genioLampada;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// comentar codigo, scrum, verificaçao 
+// verificar nomes de funçoes e atributos
+
 public class Main {
 	static Scanner sc = new Scanner(System.in);
-	static int numAleatorio = (int) (Math.random() * 3) + 1; // Limita o número aleatório entre 1 e 2 , para escolher o
-																// nº máximo de génios
-	static Lampada lampada = new Lampada(numAleatorio); // Criação do Objeto chamado Lampada
+	static int numAleatorio = (int) (Math.random() * 3) + 1; // 1 to 2
+	static Lampada lampada = new Lampada(numAleatorio);
 
-	// Método principal - inicia a execução do aplicativo Java, e mostra as opções
-	// principais do Jogo, usando um try catch
-	// com o propósito do tratamento das exceções, produzidas no momento em que o
-	// utilizador introduze inputs diferentes dos que são esperados
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lâmpada Mágica!");
 		while (true) {
@@ -43,7 +41,7 @@ public class Main {
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("Só são permitido números inteiros, tente de novo.");
-				sc.nextLine(); // Limpar consola
+				sc.nextLine();
 			}
 		}
 	}

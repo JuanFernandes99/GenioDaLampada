@@ -4,26 +4,23 @@ import java.util.InputMismatchException;
 
 public class Demonio extends Genio {
 
-	static Demonio demonio = new Demonio(); // Criação do Objeto chamado demónio
+	static Demonio demonio = new Demonio();
 
-	// Atributo
-	private static boolean isSair; // atributo criado com o fim de utilizar o método “menuSegurançaSair ()” não só
-									// para o menu principal como também para o menu do demónio
+	// Atributo(s)
+	private static boolean isSair; // verificaÃ§ao de seguranÃ§a para poupar linhas de codigo
 
-	// Construtor
+	// Construtor(es)
 
 	public Demonio() {
 	}
 
-	// Métodos
+	// MÃ©todo(s)
 
-	// Método que mostra as opções que o Demónio oferece, continuar a conceder
-	// desejos, recarregar a Lâmpada ou permite sair do jogo, usando um try catch
-	// com o propósito do tratamento das exceções, produzidas no momento em que o
-	// utilizador introduze inputs diferentes dos que são esperados.
-
+	// Função das opções que o Demíno oferece, continuar a conceder desejos,
+	// recarrega ou permite sair do jogo,usando excepções para evitar inputs
+	// diferentes dos que são pedidos.
 	public static void invocaDemonio() {
-		System.out.println("Olá, eu sou demónio e irei conceder todos os desejos que você me pedir.\n");
+		System.out.println("Ola, eu sou demÃ³nio e irei conceder todos os desejos que vocÃª me pedir.\n");
 
 		menuDemonio();
 
@@ -41,23 +38,23 @@ public class Demonio extends Genio {
 			case 3:
 				isSair = true;
 				MenuJogo.segurancaSair();
-				System.exit(0); // Método que encerra a execução da máquina virtual Java.
+				System.exit(0);
 				break;
 
 			default:
-				System.out.println("Só são permitidos números entre 1 a 3 , tente novo.");
-				invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da função
+				System.out.println("SÃ³ sÃ£o permitidos nÃºmeros entre 1 a 3 , tente novo.");
+				invocaDemonio();
 			}
 
 		} catch (InputMismatchException e) {
-			Main.sc.nextLine(); // Para limpar o Scanner
-			System.out.println("Só são permitidos números inteiros, tente novo.");
-			invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da função
+			Main.sc.nextLine();
+			System.out.println("SÃ³ sÃ£o permitidos nÃºmeros inteiros, tente novo.");
+			invocaDemonio();
 		}
 
 	}
 
-	// Lista de opções em que o utilizador pode escolher.
+	// Opções em que utilizador pode escolher.
 	public static void menuDemonio() {
 		System.out.println("1 - Pedir desejos");
 		System.out.println("2 - Recarregar a lampada");
@@ -65,16 +62,17 @@ public class Demonio extends Genio {
 
 	}
 
-	// Método para continuar a pedir desejos ao demónio.
+	// Função de continuar a pedir desejos ao demónio.
 	public static void continuarDesejoDemonio() {
-		demonio.concedeDesejo(Genio.pedirDesejos());
-		while (!Lampada.isRecarregar()) { // Enquanto a lâmpada não for recarregada continua a invocar ao demónio
+		int aux = Genio.pedirDesejos();
+		demonio.concedeDesejo(aux);
+		while (!Lampada.isRecarregar()) {
 			invocaDemonio();
 		}
 
 	}
 
-	// Getter
+	// Getters
 
 	public static boolean isSair() {
 		return isSair;
