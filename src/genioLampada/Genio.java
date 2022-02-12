@@ -7,8 +7,6 @@ public abstract class Genio {
 	protected static int maxDesejos = 0;
 	protected static int desejoDisponivel = 0;
 
-
-
 	// Construtor(es)
 	public Genio() {
 	}
@@ -32,7 +30,6 @@ public abstract class Genio {
 			}
 			AcresDesejos();
 			aux++;
-
 		}
 	}
 
