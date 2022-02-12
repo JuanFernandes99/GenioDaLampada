@@ -22,7 +22,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lâmpada Mágica!");
-		System.out.println("Criado por: \nJuan Fernandes\nJessica Barros\nSara Figueira\nElsa Gomes");
+		System.out.println("Criado por: \nJuan Fernandes\nJessica Barros\nSara Teixeira\nElsa Gomes");
 		while (true) {
 			MenuJogo.menu();
 			try {
