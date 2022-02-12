@@ -45,13 +45,13 @@ public class Demonio extends Genio {
 				break;
 
 			default:
-				System.out.println("Só são permitidos números entre 1 a 3 , tente novo.");
+				System.out.println("Só são permitidos números entre 1 a 3 , tente de novo.");
 				invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da função
 			}
 
 		} catch (InputMismatchException e) {
 			Main.sc.nextLine(); // Para limpar o Scanner
-			System.out.println("Só são permitidos números inteiros, tente novo.");
+			System.out.println("Só são permitidos números inteiros, tente de novo.");
 			invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da função
 		}
 
