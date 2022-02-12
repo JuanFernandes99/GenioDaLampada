@@ -29,7 +29,7 @@ public abstract class Genio {
 				System.out.println("Desejo: " + desejoIndicado + " Desejos disponiveis: " + (desejoDisponivel - 1));
 
 			}
-			AcresDesejos();
+			acresDesejos();
 			aux++;
 		}
 	}
@@ -37,7 +37,7 @@ public abstract class Genio {
 	// Métodos
 
 	// Soma os desejos concedidos anteriormente.
-	public static void AcresDesejos() {
+	public static void acresDesejos() {
 		desejosConcedidos++;
 	}
 
