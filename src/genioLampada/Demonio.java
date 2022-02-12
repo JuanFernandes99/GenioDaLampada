@@ -16,11 +16,6 @@ public class Demonio extends Genio {
 
 	// Métodos
 
-	public void concedeDesejo(int maxDesejos) {
-		super.concedeDesejo(maxDesejos);
-
-	}
-
 	// Método que mostra as opções que o Demónio oferece, continuar a conceder
 	// desejos, recarregar a Lâmpada ou permite sair do jogo, usando um try catch
 	// com o propósito do tratamento das exceções, produzidas no momento em que o
