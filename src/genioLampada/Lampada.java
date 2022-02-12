@@ -30,7 +30,6 @@ public class Lampada {
 	// sido recarregada
 	public static void lampadaRecarregada() {
 		isRecarregar = true;
-		esfregadelas = 0;
 		numgeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
 	}
