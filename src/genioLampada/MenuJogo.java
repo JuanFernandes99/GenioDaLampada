@@ -7,7 +7,7 @@ public class MenuJogo {
 	public static void instrucoes() {
 
 		System.out.println(" Instruções\n" + "\n"
-				+ "Este jogo realiza-se dentro de uma Lâmpada Mágica que contém um número indeterminados de génios. \nO objetivo é iniciar a lâmpada, chamar génios e pedir desejos que determinam se irá sair um génio bem ou mal-humorado.\nTenta a tua sorte e vê o que acontece no final!\n"
+				+ "Este jogo realiza-se dentro de uma Lâmpada Mágica que contém um número indeterminado de génios. \nO objetivo é iniciar a lâmpada, chamar génios e pedir desejos que determinam se irá sair um génio bem ou mal-humorado.\nTenta a tua sorte e vê o que acontece no final!\n"
 				+ "\n" + "Passos:\n" + "\n" + "1. O jogador tem de esfregar a lâmpada para iniciar o jogo;\n"
 				+ "2. O jogador decide quantas vezes quer esfregar a lâmpada;\n"
 				+ "3. O jogador pede quantos desejos quer realizados;\n" + "4. BOOOM!!! Sai o génio;\n"
