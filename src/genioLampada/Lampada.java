@@ -13,7 +13,7 @@ public class Lampada {
 
 	// Construtor
 	public Lampada(int aMaxGenios) {
-		System.out.println("A l√¢mpada foi criada com " + aMaxGenios + " g√©nio(s)");
+		System.out.println("A l‚mpada foi criada com " + aMaxGenios + " gÈnios(s)");
 		maxGenios = aMaxGenios;
 		numgeniosDisponiveis = aMaxGenios;
 	}
