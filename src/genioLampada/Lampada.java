@@ -8,29 +8,29 @@ public class Lampada {
 	private static int maxGenios;
 	private static int esfregadelas = 0;
 	private static int vezesRecarregada = 0;
-	private static int numgeniosDisponiveis = 0;
+	private static int numGeniosDisponiveis = 0;
 	private static int esfregadelasAcumuladas = 0;
 
 	// Construtor
 	public Lampada(int aMaxGenios) {
 		System.out.println("A lâmpada foi criada com " + aMaxGenios + " génios(s)");
 		maxGenios = aMaxGenios;
-		numgeniosDisponiveis = aMaxGenios;
+		numGeniosDisponiveis = aMaxGenios;
 	}
 
 	// Métodos
 
 	// Subtrai o número de génios disponíveis e retorna esse valor.
 	public static int DecresGenios() {
-		numgeniosDisponiveis--;
-		return numgeniosDisponiveis;
+		numGeniosDisponiveis--;
+		return numGeniosDisponiveis;
 	}
 
 	// Reverte os dados da lâmpada a como eram na 1º vez que foi usada, após ter
 	// sido recarregada
 	public static void lampadaRecarregada() {
 		isRecarregar = true;
-		numgeniosDisponiveis = maxGenios;
+		numGeniosDisponiveis = maxGenios;
 		vezesRecarregada++;
 	}
 
@@ -59,13 +59,13 @@ public class Lampada {
 
 		}
 		DecresGenios();
-		System.out.println("numgeniosDisponiveis: " + numgeniosDisponiveis);
+		System.out.println("numgeniosDisponiveis: " + numGeniosDisponiveis);
 	}
 
 	// Getters
 
 	public static int getNumgeniosDisponiveis() {
-		return numgeniosDisponiveis;
+		return numGeniosDisponiveis;
 	}
 
 	public static int getEsfregadelasAcumuladas() {

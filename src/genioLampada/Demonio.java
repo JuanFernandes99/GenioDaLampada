@@ -5,7 +5,6 @@ import java.util.InputMismatchException;
 public class Demonio extends Genio {
 
 	static Demonio demonio = new Demonio(); // Criação do Objeto chamado demónio
-
 	// Atributo
 	private static boolean isSair; // atributo criado com o fim de utilizar o método “menuSegurançaSair ()” não só
 									// para o menu principal como também para o menu do demónio
@@ -14,6 +13,7 @@ public class Demonio extends Genio {
 
 	public Demonio() {
 	}
+
 
 	// Métodos
 
@@ -67,11 +67,12 @@ public class Demonio extends Genio {
 
 	// Método para continuar a pedir desejos ao demónio.
 	public static void continuarDesejoDemonio() {
+		
 		demonio.concedeDesejo(Genio.pedirDesejos());
-		while (!Lampada.isRecarregar()) { // Enquanto a lâmpada não for recarregada continua a invocar ao demónio
+		while (!Lampada.isRecarregar()) {
+	// Enquanto a lâmpada não for recarregada continua a invocar ao demónio
 			invocaDemonio();
 		}
-
 	}
 
 	// Getter
