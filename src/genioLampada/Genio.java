@@ -7,27 +7,31 @@ public abstract class Genio {
 	protected static int maxDesejos = 0;
 	protected static int desejoDisponivel = 0;
 
-	// Permite ao código ser executado repetitivamente com base na condição que os
-	// desejos Concedidos (atributo) sejam menor comparativamente ao máximo de
-	// desejos (atributo) e faz a contagem crescente dos desejos concedidos.
+
 
 	// Construtor(es)
 	public Genio() {
 	}
-
+	// Permite ao código ser executado repetitivamente com base na condição que os
+	// desejos Concedidos (atributo) sejam menor comparativamente ao máximo de
+	// desejos (atributo) e faz a contagem crescente dos desejos concedidos.
 	public void concedeDesejo(int aMaxDesejos) {
 		int aux = 0;
 		while (aux < aMaxDesejos) {
 			desejoDisponivel = aMaxDesejos - aux;
 			System.out.println("\nIndique o seu desejo");
 			String desejoIndicado = Main.sc.nextLine();
+			
 			if (Demonio.isActive()) {
+				System.out.println("Desejo: " + desejoIndicado  );
+				System.out.print("MUAHAHAHAHAHAHAH ");
 				Demonio.getRandomWord();
 			} else {
 				System.out.println("Desejo: " + desejoIndicado + " Desejos disponiveis: " + (desejoDisponivel - 1));
-				AcresDesejos();
-				aux++;
+
 			}
+			AcresDesejos();
+			aux++;
 
 		}
 	}
