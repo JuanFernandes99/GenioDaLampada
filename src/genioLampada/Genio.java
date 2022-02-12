@@ -27,7 +27,6 @@ public abstract class Genio {
 			System.out.println("Desejo: " + desejoIndicado + " Cumprido! :) , Desejos concedidos: " + desejosConcedidos
 					+ ", Desejos disponiveis: " + (desejoDisponivel - 1));
 		}
-
 	}
 
 	// Métodos
@@ -42,7 +41,7 @@ public abstract class Genio {
 
 	public static int pedirDesejos() {
 
-		System.out.println("\nQuantos desejos pretende pedir?");
+		System.out.println("Quantos desejos pretende pedir?");
 
 		int desejos = Main.sc.nextInt();
 		Main.sc.nextLine();

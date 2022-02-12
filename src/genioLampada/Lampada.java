@@ -59,7 +59,7 @@ public class Lampada {
 
 		}
 		DecresGenios();
-		System.out.println("numgeniosDisponiveis: " + numGeniosDisponiveis);
+		System.out.println("número de génios Disponiveis: " + numGeniosDisponiveis);
 	}
 
 	// Getters

@@ -44,7 +44,6 @@ public class Main {
 
 				default:
 					System.out.println("Só são permitidos números entre 1 a 3 , tente de novo.");
-
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("Só são permitido números inteiros, tente de novo.");

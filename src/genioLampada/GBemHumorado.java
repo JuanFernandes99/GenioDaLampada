@@ -16,7 +16,7 @@ public class GBemHumorado extends Genio {
 		
 		System.out.println("Ola!, eu sou o genio bem-humorado e lhe concederei todos os desejos que voce me pedir");
 		super.concedeDesejo(maxDesejos);
-		System.out.println("Esgotou os seus desejos :("); // arreglar
+		System.out.print("Esgotou os seus desejos :( , "); // arreglar
 	}
 
 
