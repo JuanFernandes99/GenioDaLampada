@@ -19,18 +19,23 @@ public abstract class Genio {
 		while (aux < aMaxDesejos) {
 			desejoDisponivel = aMaxDesejos - aux;
 			System.out.println("\nIndique o seu desejo");
-			String desejoIndicado = Main.sc.nextLine();
-			
-			if (Demonio.isActive()) {
-				System.out.println("Desejo: " + desejoIndicado  );
-				System.out.print("MUAHAHAHAHAHAHAH ");
-				Demonio.getRandomWord();
-			} else {
-				System.out.println("Desejo: " + desejoIndicado + " Desejos disponiveis: " + (desejoDisponivel - 1));
+			String desejoIndicado = Main.sc.nextLine().replaceAll(" ", " ");
+			if (desejoIndicado.isEmpty()) {  // Verificação de que o desejo Indicado não esteja vazio
+				System.out.println("Desejo vazio, tente novamente");
+			}else {
+				if (Demonio.isActive()) {
+					System.out.println("Desejo: " + desejoIndicado  );
+					System.out.print("MUAHAHAHAHAHAHAH ");
+					Demonio.getRandomWord();
+				} else {
+					System.out.println("Desejo: " + desejoIndicado + " Desejos disponiveis: " + (desejoDisponivel - 1));
 
+				}
+				acresDesejos();
+				aux++;
 			}
-			acresDesejos();
-			aux++;
+
+
 		}
 	}
 
