@@ -1,25 +1,46 @@
 package genioLampada;
 
 public abstract class Genio {
-	
+
 	// Atributo(s)
-	protected static Integer desejosConcedidos;
-	protected static Integer maxDesejos;
+	protected static int desejosConcedidos = 0;
+	protected static int maxDesejos = 0;
+	protected static int desejoDisponivel = 0;
 
+	// Concede desejos, permitindo ao código ser executado repetitivamente baseado
+	// na condição da auxiliar ser menor comparativamente ao máximo de desejos
+	// (atributo) e faz a contagem dos desejos pedidos.
 
-	public abstract void concedeDesejo(long maxDesejos);
+	public void concedeDesejo(int aMaxDesejos) {
+		int contadorDesejos = 0;
+		while (contadorDesejos < aMaxDesejos) {
+			desejoDisponivel = aMaxDesejos - contadorDesejos;
+			System.out.println("\nDesejos disponiveis: " + (desejoDisponivel));
+			System.out.println("\nIndique o seu desejo");
+			String desejoIndicado = Main.sc.nextLine();
+			System.out.println("Desejo: " + desejoIndicado);
+			System.out.println("\nDesejo Cumprido! :)");
+			contadorDesejos++;
+			Genio.AcresDesejos();
+			System.out.println("Desejos concedidos: " + desejosConcedidos);
+		}
 
-	 // Construtor(es)
-	public Genio() {
-		desejosConcedidos = 0;
-		maxDesejos = 0;
+		System.out.println("Esgotou os seus desejos :(");
 	}
 
-	 // Mï¿½todo(s)
+	// Construtor(es)
+	public Genio() {
+	}
+
+	// Mï¿½todo(s)
+
+	// Soma os desejos concedidos anteriormente.
 	public static void AcresDesejos() { // Acrescimos dos desejos.
 		desejosConcedidos++;
 	}
 
+	// Pede o nº de desejos ao utilizador e guarda-os, condicionando-os nº num
+	// intervalo.
 	public static int pedirDesejos() {
 
 		System.out.println("\nQuantos desejos pretende pedir?");
@@ -27,31 +48,13 @@ public abstract class Genio {
 		int desejos = Main.sc.nextInt();
 		Main.sc.nextLine();
 
-		if (desejos <= 0) {
+		if (desejos <= 0 || desejos > 10) {
 
-			System.out.println("O nÃºmero de desejos deve ser superior a 0 ");
+			System.out.println("O nÃºmero de desejos deve ser superior a 0 e inferior a 10 ");
 			pedirDesejos();
 
 		}
 
 		return desejos;
 	}
-
-	  // Getters e Setters
-	public Integer getDesejosConcedidos() {
-		return desejosConcedidos;
-	}
-
-	public static Integer getMaxDesejos() {
-		return maxDesejos;
-	}
-
-	public static void setMaxDesejos(Integer aMaxDesejos) {
-		Genio.maxDesejos = aMaxDesejos;
-	}
-
-	public void setDesejosConcedidos(Integer aDesejosConcedidos) {
-		Genio.desejosConcedidos = aDesejosConcedidos;
-	}
-
 }

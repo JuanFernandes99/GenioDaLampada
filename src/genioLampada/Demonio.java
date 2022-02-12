@@ -4,36 +4,21 @@ import java.util.InputMismatchException;
 
 public class Demonio extends Genio {
 
-	private static boolean isSair; //verifica√ßao de seguran√ßa para poupar linhas de codigo
 	static Demonio demonio = new Demonio();
 
 	// Atributo(s)
-	protected long desejoDisponivelDemonio;
+	private static boolean isSair; // verifica√ßao de seguran√ßa para poupar linhas de codigo
 
 	// Construtor(es)
+
 	public Demonio() {
-		desejoDisponivelDemonio = 0;
 	}
 
 	// M√©todo(s)
 
-	@Override
-	public void concedeDesejo(long maxDesejos) {
-
-		int aux = 0;
-		while (aux < maxDesejos) {
-			desejoDisponivelDemonio = maxDesejos - aux;
-			System.out.println("\nDesejos dispon√≠veis: " + (desejoDisponivelDemonio));
-			System.out.println("\nIndique o seu desejo");
-			String desejoIndicado = Main.sc.nextLine();
-			System.out.println("Desejo: " + desejoIndicado);
-			System.out.println("\nDesejo Cumprido! :)");
-			aux++;
-			Genio.AcresDesejos();
-			System.out.println("Desejos concedidos: " + desejosConcedidos);
-		}
-	}
-
+	// FunÁ„o das opÁıes que o DemÌno oferece, continuar a conceder desejos,
+	// recarrega ou permite sair do jogo,usando excepÁıes para evitar inputs
+	// diferentes dos que s„o pedidos.
 	public static void invocaDemonio() {
 		System.out.println("Ola, eu sou dem√≥nio e irei conceder todos os desejos que voc√™ me pedir.\n");
 
@@ -69,6 +54,7 @@ public class Demonio extends Genio {
 
 	}
 
+	// OpÁıes em que utilizador pode escolher.
 	public static void menuDemonio() {
 		System.out.println("1 - Pedir desejos");
 		System.out.println("2 - Recarregar a lampada");
@@ -76,6 +62,7 @@ public class Demonio extends Genio {
 
 	}
 
+	// FunÁ„o de continuar a pedir desejos ao demÛnio.
 	public static void continuarDesejoDemonio() {
 		int aux = Genio.pedirDesejos();
 		demonio.concedeDesejo(aux);
@@ -85,22 +72,10 @@ public class Demonio extends Genio {
 
 	}
 
-	// Getters e Setters
-	
-	public long getDesejoDisponivelDemonio() {											// retirar
-		return desejoDisponivelDemonio;	
-	}
+	// Getters
 
 	public static boolean isSair() {
 		return isSair;
-	}
-
-	public static void setIsSair(boolean aIsSair) {											// verificar se ÔøΩ possivel retirar
-		Demonio.isSair = aIsSair;
-	}
-
-	public void setDesejoDisponivelDemonio(Integer aDesejoDisponivelDemonio) {				// retirar
-		desejoDisponivelDemonio = aDesejoDisponivelDemonio;
 	}
 
 }

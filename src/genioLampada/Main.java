@@ -31,6 +31,10 @@ public class Main {
 					MenuJogo.segurancaSair();
 					break;
 
+				case 4:
+					System.out.println("Esfregadelas Acumuladas: " + Lampada.getEsfregadelasAcumuladas());
+					break;
+
 				default:
 					System.out.println("Só são permitidos números entre 1 a 3 , tente de novo.");
 
