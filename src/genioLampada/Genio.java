@@ -6,8 +6,7 @@ public abstract class Genio {
 	protected static int desejosConcedidos = 0;
 	protected static int maxDesejos = 0;
 	protected static int desejoDisponivel = 0;
-	
-	
+
 	// Permite ao código ser executado repetitivamente com base na condição que os
 	// desejos Concedidos (atributo) sejam menor comparativamente ao máximo de
 	// desejos (atributo) e faz a contagem crescente dos desejos concedidos.
@@ -17,16 +16,16 @@ public abstract class Genio {
 	}
 
 	public void concedeDesejo(int aMaxDesejos) {
-		
-		while (desejosConcedidos < aMaxDesejos) {
+		int aux = 0;
+		while (aux < aMaxDesejos) {
 
-			desejoDisponivel = aMaxDesejos - desejosConcedidos;
-			System.out.println("\nDesejos disponiveis: " + desejoDisponivel);
+			desejoDisponivel = aMaxDesejos - aux;
 			System.out.println("\nIndique o seu desejo");
 			String desejoIndicado = Main.sc.nextLine();
-			System.out.println("Desejo: " + desejoIndicado + " Cumprido! :)");
 			AcresDesejos();
-			System.out.println("Desejos concedidos: " + desejosConcedidos);
+			aux++;
+			System.out.println("Desejo: " + desejoIndicado + " Cumprido! :) , Desejos concedidos: " + desejosConcedidos
+					+ ", Desejos disponiveis: " + (desejoDisponivel - 1));
 		}
 
 	}
@@ -39,7 +38,8 @@ public abstract class Genio {
 	}
 
 	// Pede o nº de desejos ao utilizador e guarda-os, condicionando-os nº num
-	// intervalo e retorna à quantidade de desejos..
+	// intervalo e retorna à quantidade de desejos
+
 	public static int pedirDesejos() {
 
 		System.out.println("\nQuantos desejos pretende pedir?");
@@ -51,7 +51,6 @@ public abstract class Genio {
 			System.out.println("O número de desejos deve ser superior a 0 e inferior a 10 ");
 			return pedirDesejos(); // Método recursivo que chama a si mesma para voltar ao início da função
 		}
-
 		return desejos;
 	}
 }
