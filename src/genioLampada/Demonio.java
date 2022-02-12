@@ -6,10 +6,10 @@ public class Demonio extends Genio {
 
 	static Demonio demonio = new Demonio(); // Criação do Objeto chamado demónio
 	// Atributo
-	private static boolean isSair; // atributo criado com o fim de utilizar o método “menuSegurançaSair ()” não só
+	private static boolean isSair; // Atributo criado com o fim de utilizar o método “menuSegurançaSair ()” não só
 									// para o menu principal como também para o menu do demónio
-	private static boolean isActive;
-	// Construtor
+	
+	private static boolean isActive;// Atributo criado com o fim de verificar se o demónio esta a ser utilizado.
 
 	public Demonio() {
 	}

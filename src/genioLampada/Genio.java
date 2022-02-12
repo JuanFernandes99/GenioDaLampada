@@ -10,6 +10,7 @@ public abstract class Genio {
 	// Construtor(es)
 	public Genio() {
 	}
+	
 	// Permite ao código ser executado repetitivamente com base na condição que os
 	// desejos Concedidos (atributo) sejam menor comparativamente ao máximo de
 	// desejos (atributo) e faz a contagem crescente dos desejos concedidos.
