@@ -36,6 +36,11 @@ public class Main {
 				case 4:
 					System.out.println("Esfregadelas Acumuladas: " + Lampada.getEsfregadelasAcumuladas());
 					break;
+					
+				case 5 :
+					System.out.println("Vezes recarregadas: " + Lampada.getVezesRecarregada());
+					break;
+					
 
 				default:
 					System.out.println("Só são permitidos números entre 1 a 3 , tente de novo.");

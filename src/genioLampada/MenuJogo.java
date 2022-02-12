@@ -37,6 +37,7 @@ public class MenuJogo {
 		System.out.println("2 - Começar o jogo");
 		System.out.println("3 - Sair do jogo");
 		System.out.println("4 - Quantidade de Esfregadelas");
+		System.out.println("5 - Quantidade de Recarregamentos");
 	}
 
 	// Apresenta ao utilizador um menu de segurança, após ter

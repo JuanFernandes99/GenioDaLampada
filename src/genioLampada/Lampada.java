@@ -75,4 +75,8 @@ public class Lampada {
 	public static boolean isRecarregar() {
 		return isRecarregar;
 	}
+
+	public static int getVezesRecarregada() {
+		return vezesRecarregada;
+	}
 }
