@@ -16,6 +16,10 @@ public class Main {
 	
 	public static void main(String[] args) {
 		System.out.println("Bem-vindo ao jogo da Lâmpada Mágica!");
+<<<<<<< HEAD
+=======
+		System.out.println("Criado por: \nJuan Fernandes\nJessica Barros\nSara Figueira\nElsa Gomes");
+>>>>>>> parent of 645d2b7 (Atualizado)
 		while (true) {
 			MenuJogo.menu();
 			try {
