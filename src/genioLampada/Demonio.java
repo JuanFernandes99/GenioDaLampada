@@ -51,14 +51,14 @@ public class Demonio extends Genio {
 
 			default:
 				System.out.println("Só são permitidos números entre 1 e 3 , tente de novo.");
-				invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da mesma
+				invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da própria
 			}
 
 		} catch (InputMismatchException e) {
 			Main.sc.nextLine(); // Para limpar o Scanner
 			System.out.println(
-					"Erro no input: Só são permitidos números inteiros entre -2147483648 até 2147483647, tente de novo.");
-			invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da mesma
+					"Erro fatal (448): Digite um número inteiro de 1 até 2147483647. Os caracteres também não são permitidos. Tente novamente :)");
+			invocaDemonio(); // Método recursivo que chama a si mesma para voltar ao início da própria
 		}
 
 	}

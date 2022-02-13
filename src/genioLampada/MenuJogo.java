@@ -62,7 +62,7 @@ public class MenuJogo {
 				break;
 			case 2:
 				System.out.println("Bem-vindos novamente!\n");
-				if (Demonio.isSair()) {
+				if (Demonio.isSair()) { // Foi feito para não criar outro menu segurança para o demónio.
 					Demonio.invocaDemonio();
 				} else {
 					jogar();
@@ -75,7 +75,8 @@ public class MenuJogo {
 
 			}
 		} catch (InputMismatchException e) {
-			System.out.println("Só são permitidos números inteiros, tente novo.");
+			System.out.println(
+					"Erro fatal (448): Digite um número inteiro de 1 até 2147483647. Os caracteres também não são permitidos. Tente novamente :)");
 			Main.sc.nextLine(); // Limpar consola
 			segurancaSair(); // Método recursivo que chama a si mesma para voltar ao início da mesma
 		}

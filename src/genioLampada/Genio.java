@@ -57,7 +57,7 @@ public abstract class Genio {
 
 		if (desejos <= 0 || desejos > 10) {
 			System.out.println("O número de desejos deve ser superior a 0 e inferior a 10 ");
-			return pedirDesejos(); // Método recursivo que chama a si mesma para voltar ao início da mesma
+			return pedirDesejos(); // Método recursivo que chama a si mesma para voltar ao início da própria
 		}
 		return desejos;
 	}

@@ -43,7 +43,7 @@ public class Lampada {
 		esfregadelasAcumuladas += esfregadelas;
 		if (esfregadelas <= 0) {
 			System.out.println("\nO número deve ser superior a zero.");
-			esfregarLampada(); // Método recursivo que chama a si mesma para voltar ao início da mesma
+			esfregarLampada(); // Método recursivo que chama a si mesma para voltar ao início da própria
 
 		} else {
 

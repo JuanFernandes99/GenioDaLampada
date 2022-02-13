@@ -55,7 +55,7 @@ public class Main {
 				}
 			} catch (InputMismatchException e) {
 				System.out.println(
-						"Erro no input: Só são permitidos números inteiros entre -2147483648 até 2147483647, tente de novo.");
+						"Erro fatal (448): Digite um número inteiro de 1 até 2147483647. Os caracteres também não são permitidos. Tente novamente :)");
 				sc.nextLine(); // Limpar consola
 			}
 		}
