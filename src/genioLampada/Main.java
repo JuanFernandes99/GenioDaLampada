@@ -32,7 +32,7 @@ public class Main {
 				switch (opcao) {
 
 				case 1:
-					MenuJogo.instrucoes();
+					play;
 					break;
 				case 2:
 					MenuJogo.jogar();
